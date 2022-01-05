@@ -1,3 +1,4 @@
+
 const FooterMenu = () => {
     return (
         <>
@@ -8,28 +9,25 @@ const FooterMenu = () => {
                             <h5>Contact</h5>
                             <p>
                                 <span className="iconify" data-icon="foundation:telephone"></span>
-                                +855 123 456 789
+                                 <span> +855 123 456 789</span>
                             </p>
                             <p>
                                 <span className="iconify" data-icon="bx:bxs-envelope"></span>
-                                komrok@gmail.com
+                                 <span> khomrok@gmail.com</span>
                             </p>
                         </div>
 
                         <div className="f-menu col-md-3 col-sm-4 ">
                             <h5>job seekers</h5>
                             <p>
-                                <a href="#">Jobs Search</a>
-                            </p>
-                            <p>
-                                <a href="#">Discover Job Types</a>
+                                <a href="/jobtype">Discover Job Types</a>
                             </p>
                         </div>
 
                         <div className="f-menu col-md-3 col-sm-4 ">
                             <h5>employers</h5>
                             <p>
-                                <a href="#">Post a Job</a>
+                                <a href="/post">Post a Job</a>
                             </p>
                             <p>
                                 <a href="#">Browe Freelancer</a>
@@ -42,7 +40,7 @@ const FooterMenu = () => {
                         <div className="f-menu col-md-3 col-sm-4 ">
                             <h5>Social Media</h5>
                             <p>
-                                <a href="#">Facebook Page</a>
+                                <a href="#" target="_blank">Facebook Page</a>
                             </p>
                             <p>
                                 <a href="#">LinkedIn</a>

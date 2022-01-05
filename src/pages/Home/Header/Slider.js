@@ -16,17 +16,15 @@ const Slider = () => {
                         </div>
 
                         <div className="move-down">
-                            <div>
-                                <a href="#browe">
-                                    Discover Careers &nbsp;
-                                    <span className="iconify" data-icon="bi:arrow-down-circle"></span>
-                                </a>
-                            </div>
+                            <a href="#browse">
+                                Discover Top Careers &nbsp;
+                                <span className="iconify" data-icon="bi:arrow-down-circle"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div id="browe"></div>
+                <div id="browse"></div>
             </header>
         </>
     )
