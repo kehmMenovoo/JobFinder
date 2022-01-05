@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Khom-Rok/static/js/main.a2c53d0c.js",
-    "static/media/JOBFINDER.png": "/Khom-Rok/static/media/JOBFINDER.3918b04f49d37d494fb6.png",
-    "index.html": "/Khom-Rok/index.html",
-    "main.a2c53d0c.js.map": "/Khom-Rok/static/js/main.a2c53d0c.js.map"
+    "main.js": "/kehmMenovoo/Khom-Rok.git/static/js/main.49cd49b9.js",
+    "static/media/JOBFINDER.png": "/kehmMenovoo/Khom-Rok.git/static/media/JOBFINDER.3918b04f49d37d494fb6.png",
+    "index.html": "/kehmMenovoo/Khom-Rok.git/index.html",
+    "main.49cd49b9.js.map": "/kehmMenovoo/Khom-Rok.git/static/js/main.49cd49b9.js.map"
   },
   "entrypoints": [
-    "static/js/main.a2c53d0c.js"
+    "static/js/main.49cd49b9.js"
   ]
 }
