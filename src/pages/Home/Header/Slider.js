@@ -1,0 +1,35 @@
+// import JobSlider from '../../../images/JobSlider.jpg';
+
+const Slider = () => {
+    return (
+        <>
+            <header>
+                <div className="slider">
+                    <div className="slider-img">
+                        {/* <img src={JobSlider} />
+                        <div className="color-img"></div> */}
+                    </div>
+                    <div className="slider-content">
+                        <div className="welcome">
+                            <h1>Welcome to <span style={{color: "#2b95ff"}} >Khom Rok</span> site</h1>
+                            <p>Discover your next career move, freelance gig, or internship</p>
+                        </div>
+
+                        <div className="move-down">
+                            <div>
+                                <a href="#browe">
+                                    Discover Careers &nbsp;
+                                    <span className="iconify" data-icon="bi:arrow-down-circle"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="browe"></div>
+            </header>
+        </>
+    )
+}
+
+export default Slider

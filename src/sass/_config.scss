@@ -1,0 +1,16 @@
+
+$main-color: rgb(43, 149, 255);
+$register: rgb(255, 0, 85);
+$width-menu-item: 327px;
+$white: #f8f9fa;
+$hover-menu: rgb(233, 233, 233);
+$dark-gray: rgb(100, 100, 100);
+$background: rgb(224, 224, 224);
+$img-slider: url('../JobSlider.jpg');
+
+
+%flex-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
