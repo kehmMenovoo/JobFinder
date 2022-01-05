@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/JobFinder_Project/static/js/main.f2460f07.js",
+    "static/media/JOBFINDER.png": "/JobFinder_Project/static/media/JOBFINDER.3918b04f49d37d494fb6.png",
+    "index.html": "/JobFinder_Project/index.html",
+    "main.f2460f07.js.map": "/JobFinder_Project/static/js/main.f2460f07.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f2460f07.js"
+  ]
+}
