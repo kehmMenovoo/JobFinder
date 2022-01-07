@@ -2,7 +2,7 @@
   "name": "jobs_finder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kehmMenovoo.github.io/Khom-Rok",
+  "homepage": "https://kehmMenovoo.github.io/JobFinder",
   "dependencies": {
     "axios": "^0.24.0",
     "date-fns": "^2.27.0",
