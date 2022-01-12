@@ -6,7 +6,7 @@
             "company": "XWATER TECHNOLOGY CO., LTD",
             "location": "Phnom Penh, Cambodia",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager, Sales..."
+            "position": "HR & Admin Officer / Accounting Manager / Sales Manager/ Sales..."
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "company": "XWATER TECHNOLOGY CO., LTD",
             "location": "Phnom Penh, Cambodia",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager, Sales..."
+            "position": "HR & Admin Officer / Accounting Manager / Marketing Manager..."
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "company": "XWATER TECHNOLOGY CO., LTD",
             "location": "Phnom Penh, Cambodia",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager, Sales..."
+            "position": "Senoir Manager / Accounting Manager / Sales Manager/ Sales..."
         },
         {
             "id": 4,
@@ -38,7 +38,15 @@
             "company": "XWATER TECHNOLOGY CO., LTD",
             "location": "Phnom Penh, Cambodia",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager, Sales..."
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales..."
+        },
+        {
+            "id": 6,
+            "avatar": "./images/JOBFINDER.png",
+            "company": "What is Your Brand? I am on here.",
+            "location": "Phnom Penh, Cambodia",
+            "due": "13 Mar, 2022",
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales..."
         }
     ]
 }

@@ -10,7 +10,7 @@ body {
                                                 
 
     .home {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(11, 45, 77, 0.829)), $img-slider;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(2, 20, 37, 0.829)), $img-slider;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -36,4 +36,5 @@ body {
 @import 'home';
 @import 'types';
 @import 'favorites';
+@import 'missing';
 @import 'mobile';

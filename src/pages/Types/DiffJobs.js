@@ -1,4 +1,4 @@
-const Diff_Jobs = () => {
+const DiffJobs = () => {
     return (
         <>
             <select className="form-select" aria-label="Default select job-type">
@@ -19,4 +19,4 @@ const Diff_Jobs = () => {
     )
 }
 
-export default Diff_Jobs
+export default DiffJobs

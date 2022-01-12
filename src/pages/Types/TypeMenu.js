@@ -1,5 +1,5 @@
-import Diff_Jobs from "./Diff_Jobs";
-import Duration_Jobs from "./Duration_Jobs";
+import DiffJobs from "./DiffJobs";
+import DurationJobs from "./DurationJobs";
 import Seniority from "./Seniority";
 import Contents from "../Home/Body/Contents";
 import FooterMenu from "../Home/Footer/FooterMenu";
@@ -30,8 +30,8 @@ const TypeMenu = ({data, isLoading, fetchError}) => {
                         </div>
                         <div>
                             <form>
-                                <Diff_Jobs />
-                                <Duration_Jobs />
+                                <DiffJobs />
+                                <DurationJobs />
                                 <Seniority />
                             </form>
                         </div>

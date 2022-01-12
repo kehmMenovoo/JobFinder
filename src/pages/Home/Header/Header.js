@@ -1,7 +1,7 @@
 import JOBFINDER from '../../../images/JOBFINDER.png';
-import { useLocation } from "react-router-dom";
+import { useLocation, Link, useHistory } from "react-router-dom";
 
-const Header = () => {
+const Header = ({search, setSearch}) => {
     //assigning location variable
     const location = useLocation();
 
@@ -12,6 +12,13 @@ const Header = () => {
     const splitLocation = pathname.split("/");
     const navLink = "nav-link";
 
+    const history = useHistory();
+
+    const handleSearch = e => {
+        e.preventDefault();
+        history.push('/search');
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,15 +27,23 @@ const Header = () => {
                         <div className="search-item align-items-center">
                             <div className="logo">
                                 <a className="navbar-brand text-success" href="/">
-                                    <img src={JOBFINDER} />
+                                    <img src={JOBFINDER} alt="JobFinder" />
                                 </a>
                             </div>
                             <div className="search">
-                                    <form className="d-flex align-items-center" autoComplete="off">
+                                    <form className="d-flex align-items-center" autoComplete="off" onSubmit={e => handleSearch(e)} >
                                         <label className="search-icon">
                                             <span class="iconify" data-icon="bx:bx-search-alt-2"></span>
                                         </label>
-                                        <input className="form-control me-2" id="Search-job" type="search-input" placeholder="Search..." aria-label="Search" />
+                                        <input 
+                                            className="form-control me-2" 
+                                            id="Search-job" 
+                                            type="search-input" 
+                                            placeholder="Search..." 
+                                            aria-label="Search" 
+                                            value={search}
+                                            onChange={(e) => setSearch(e.target.value)}
+                                        />
                                     </form>
                             </div>
                         </div>
@@ -38,9 +53,9 @@ const Header = () => {
                             <ul className="navbar-nav" id='navbar-menu'>
                                 <li className="nav-item">
                                     <div>
-                                        <a className={splitLocation[1] === "" ? `${navLink} active` : navLink} href="/">
-                                            <span className="iconify" data-icon="fa-solid:home"></span>
-                                        </a>
+                                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} to="/">
+                                            <span class="iconify" data-icon="ant-design:home-outlined"></span>
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Home</p>
@@ -48,9 +63,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <a className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} href="/jobtype">
+                                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to="/jobtype">
                                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Job Types</p>
@@ -58,9 +73,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <a className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} href="/favorites">
+                                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites">
                                             <span className="iconify" data-icon="ant-design:heart-outlined"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Favorites</p>
@@ -68,9 +83,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <a className={splitLocation[1] === "post" ? `${navLink} active` : navLink} href="/post">
+                                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
                                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Upload</p>
@@ -78,9 +93,9 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <a className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} href="/contact">
+                                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact">
                                             <span className="iconify" data-icon="bx:bx-phone"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Contact</p>
@@ -102,21 +117,21 @@ const Header = () => {
 
                 <div className="mb-menu">
                     <nav className="nav justify-content-center" id='navbar-menu'>
-                        <a className={splitLocation[1] === "" ? `${navLink} active` : navLink} aria-current="page" href="/" >
-                            <span className="iconify" data-icon="fa-solid:home"></span>
-                        </a>
-                        <a className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} href="/jobtype">
+                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} aria-current="page" to="/" >
+                            <span class="iconify" data-icon="ant-design:home-outlined"></span>
+                        </Link>
+                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to="/jobtype">
                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
-                        </a>
-                        <a className="nav-link" href="/favorites">
+                        </Link>
+                        <Link className="nav-link" to="/favorites">
                             <span className="iconify" data-icon="ant-design:heart-outlined"></span>
-                        </a>
-                        <a className={splitLocation[1] === "post" ? `${navLink} active` : navLink} href="/post">
+                        </Link>
+                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
-                        </a>
-                        <a className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} href="/contact">
+                        </Link>
+                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact">
                             <span className="iconify" data-icon="bx:bx-phone"></span>
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             </nav>

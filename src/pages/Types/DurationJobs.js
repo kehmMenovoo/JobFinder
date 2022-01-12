@@ -1,4 +1,4 @@
-const Duration_Jobs = () => {
+const DurationJobs = () => {
     return (
         <>
             <select className="form-select" aria-label="Default select job-time">
@@ -14,4 +14,4 @@ const Duration_Jobs = () => {
     )
 }
 
-export default Duration_Jobs
+export default DurationJobs

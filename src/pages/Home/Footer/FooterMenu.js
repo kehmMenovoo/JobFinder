@@ -30,23 +30,23 @@ const FooterMenu = () => {
                                 <a href="/post">Post a Job</a>
                             </p>
                             <p>
-                                <a href="#">Browe Freelancer</a>
+                                <a href="/browsefreelancer">Browe Freelancer</a>
                             </p>
                             <p>
-                                <a href="#">Post a Project</a>
+                                <a href="/postproject">Post a Project</a>
                             </p>
                         </div>
 
                         <div className="f-menu col-md-3 col-sm-4 ">
                             <h5>Social Media</h5>
                             <p>
-                                <a href="#" target="_blank">Facebook Page</a>
+                                <a href="https://www.facebook.com/">Facebook Page</a>
                             </p>
                             <p>
-                                <a href="#">LinkedIn</a>
+                                <a href="https://linkedin.com/">LinkedIn</a>
                             </p>
                             <p>
-                                <a href="#">Twitter</a>
+                                <a href="https://twitter.com/">Twitter</a>
                             </p>
                         </div>
                     </div>

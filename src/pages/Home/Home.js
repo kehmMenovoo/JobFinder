@@ -3,7 +3,7 @@ import Contents from "./Body/Contents";
 import FooterMenu from "./Footer/FooterMenu";
 import Copyright from "./Footer/Copyright";
 
-const Home = ({data, setData, isLoading, setLoading, fetchError, setFetchError}) => {
+const Home = ({data, isLoading, fetchError}) => {
 
     return (
         <div className="home">
