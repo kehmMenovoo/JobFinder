@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom';
 
 const Job = ({item}) => {
     return (
-            
         <div className="col-sm-6 col-md-4 col-12 col-lg-3">
             <div className="card text-dark mb-3">  
-                <Link to={`/job_info/${item.id}`}>
+                <Link to={`/jobinfo`}>
                     <div className="card-header">
                         <div className="row g-0">
                             <div className="col-md-4">

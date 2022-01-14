@@ -1,13 +1,17 @@
 import Job from "./Job";
 
-const JobItems = ({data, isLoading}) => {
+const JobItems = ({data, isLoading, search, splitLocation}) => {
 
     return (
         <>
             <div className="content-container">
                 <div className="container mt-4 d-flex align-items-center gap-3" id="job-items">
-                    <div className="count-jobs text-secondary">
-                        Found: {data.length} {data.length !== 1 ? "results" : "result"}
+                    <div className="count-jobs text-secondary" id="jobcount-res">
+                        {search && splitLocation[1] === 'search' ? 
+                            `Search for: ${search} | Found: ${data.length} ${data.length !== 1 ? "results" : "result"}`
+                            : 
+                            `Found: ${data.length} ${data.length !== 1 ? "results" : "result"}`
+                        }
                     </div>
                 </div>
                 <div className="container">
@@ -20,7 +24,7 @@ const JobItems = ({data, isLoading}) => {
                 </div>
             </div>
 
-            {data.length > 40 ? (
+            {/* {data.length > 40 ? (
                 <nav aria-label="Page navigation" className="pagination-content d-flex justify-content-center mt-3">
                     <ul className="pagination">
                         <li className="page-item">
@@ -38,7 +42,7 @@ const JobItems = ({data, isLoading}) => {
                         </li>
                     </ul>
                 </nav>
-            ):(null)}
+            ):(null)} */}
         </>
     )
 }

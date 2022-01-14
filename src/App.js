@@ -1,14 +1,14 @@
-import { Switch, Route} from "react-router-dom";
+import { Switch, Route, useLocation, useHistory} from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "./pages/Home/Header/Header";
 import Home from "./pages/Home/Home";
 import TypeMenu from './pages/Types/TypeMenu';
-import Favorites from "./pages/Favorites/Favorites";
+import Favorite from "./pages/Favorites/Favorite";
 import Post from './pages/Post/Post';
 import Contact from "./pages/Contact/Contact";
 import Register from "./pages/Register/Register";
 import SignIn from "./pages/Sign_In/SignIn";
-import JobInfo from "./pages/JobInfo/JobInfo";
+import JobInformation from "./pages/JobInfo/JobInformation";
 import NextPage from "./pages/Home/Body/NextPage";
 import BrowseFreelancer from "./pages/Post/BrowseFreelancer";
 import PostProject from "./pages/Post/PostProject";
@@ -16,15 +16,20 @@ import About from "./pages/About/About";
 import Privacy from "./pages/Privacy/Privacy";
 import TermOfUse from "./pages/TermOfUse/TermOfUse";
 import Missing from "./pages/Error/Missing";
-import Search from "./pages/Search/Search";
+import SearchJobs from "./pages/Search/SearchJobs";
 
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
   const [search, setSearch] = useState('');
+  const [valueSearch, setValueSearch] = useState('');
 
   const API_URL = 'http://localhost:3500/data';
+
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
 
   useEffect(() => {
       const fetchItems = async () => {
@@ -46,21 +51,54 @@ function App() {
         fetchItems();
   }, []);
 
+  const title=["Search", "Home", "Job Types", "Favorites", "Post", "Contact Us", "Job Information", "Register", 
+    "Sign in", "Browse Freelancer", "Post Project", "About", "Privacy", "Term of Use", "Page Not Found"];
+  const main = "Khom Rok | ";
+  const titleName = document.querySelector("title");
+
+  switch(splitLocation[1]) {
+    case "search": titleName.innerHTML = main + title[0] + " for - " + search; break;
+    case "": titleName.innerHTML = main + title[1]; break;
+    case "jobtype": titleName.innerHTML = main + title[2]; break;
+    case "favorites": titleName.innerHTML = main + title[3]; break;
+    case "post": titleName.innerHTML = main + title[4]; break;
+    case "contact": titleName.innerHTML = main + title[5]; break;
+    case "jobinfo": titleName.innerHTML = main + title[6]; break;
+    case "register": titleName.innerHTML = main + title[7]; break;
+    case "sign_in": titleName.innerHTML = main + title[8]; break;
+    case "browsefreelancer": titleName.innerHTML = main + title[9]; break;
+    case "postproject": titleName.innerHTML = main + title[10]; break;
+    case "about": titleName.innerHTML = main + title[11]; break;
+    case "privacy": titleName.innerHTML = main + title[12]; break;
+    case "termofuse": titleName.innerHTML = main + title[13]; break;
+    default: titleName.innerHTML = main + title[14];
+  }
+  const history = useHistory();
+
+  const handleSearch = e => {
+    e.preventDefault();
+    if(valueSearch) setSearch(valueSearch);
+    history.push('/search');
+  }
+  let dataItem = data.filter(i => (i.company).toLowerCase().includes(search.toLowerCase()) || (i.position).toLowerCase().includes(search.toLowerCase()));
+  
   return (
     <div className="App">
-        <Header search={search} setSearch={setSearch} />
+        {splitLocation[1] === "register" || splitLocation[1] === "sign_in" ? null : 
+          <Header valueSearch={valueSearch} setValueSearch={setValueSearch} splitLocation={splitLocation} handleSearch={handleSearch} />
+        }
           <Switch>
             <Route exact path="/search">
-              <Search data={data} isLoading={isLoading} fetchError={fetchError} search={search} />
+              <SearchJobs data={dataItem} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route exact path="/">
-              <Home data={data} isLoading={isLoading} fetchError={fetchError} />
+              <Home data={data} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route path="/jobtype">
-              <TypeMenu data={data} isLoading={isLoading} fetchError={fetchError} />
+              <TypeMenu data={data} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route path="/favorites">
-              <Favorites fetchError={fetchError} isLoading={isLoading} />
+              <Favorite fetchError={fetchError} isLoading={isLoading} />
             </Route>
             <Route path="/post">
               <Post fetchError={fetchError} isLoading={isLoading} />
@@ -70,7 +108,9 @@ function App() {
             </Route>
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
-            <Route path="/job_info/:id" component={JobInfo} />
+            <Route path="/jobinfo">
+              <JobInformation isLoading={isLoading} fetchError={fetchError} />
+            </Route>
             <Route path="/nextpage" component={NextPage} />
             <Route path="/browsefreelancer" component={BrowseFreelancer} />
             <Route path="/postproject" component={PostProject} />

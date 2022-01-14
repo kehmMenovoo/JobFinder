@@ -1,24 +1,10 @@
 import JOBFINDER from '../../../images/JOBFINDER.png';
-import { useLocation, Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Header = ({search, setSearch}) => {
-    //assigning location variable
-    const location = useLocation();
+const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
 
-    //destructuring pathname from location
-    const { pathname } = location;
-
-    //Javascript split method to get the name of the path in array
-    const splitLocation = pathname.split("/");
     const navLink = "nav-link";
-
-    const history = useHistory();
-
-    const handleSearch = e => {
-        e.preventDefault();
-        history.push('/search');
-    }
-
+    
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -41,8 +27,8 @@ const Header = ({search, setSearch}) => {
                                             type="search-input" 
                                             placeholder="Search..." 
                                             aria-label="Search" 
-                                            value={search}
-                                            onChange={(e) => setSearch(e.target.value)}
+                                            value={valueSearch}
+                                            onChange={(e) => setValueSearch(e.target.value)}
                                         />
                                     </form>
                             </div>
@@ -105,12 +91,12 @@ const Header = ({search, setSearch}) => {
                         </div>
 
                         <div className="sign-in">
-                            <a href="/register">
+                            <Link to="/register">
                                 <button id="register">Regiter</button>
-                            </a>
-                            <a href="/sign_in">
+                            </Link>
+                            <Link to="/sign_in">
                                 <button id="sign-in">Sign in</button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

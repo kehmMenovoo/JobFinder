@@ -1,6 +1,6 @@
 import JobItems from "./JobItems";
 
-const Contents = ({data, fetchError, isLoading}) => {
+const Contents = ({data, fetchError, isLoading, search, splitLocation}) => {
     return (
         <>
             <main id="job-content">
@@ -16,7 +16,7 @@ const Contents = ({data, fetchError, isLoading}) => {
                 }
                 {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
                 {!fetchError && !isLoading && 
-                    <JobItems data={data} isLoading={isLoading} />
+                    <JobItems data={data} isLoading={isLoading} search={search} splitLocation={splitLocation} />
                 }
             </main>
         </>

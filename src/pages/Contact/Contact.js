@@ -1,3 +1,5 @@
+import ContactContent from "./ContactContent"
+
 const Contact = ({fetchError, isLoading}) => {
     return (
         <div>
@@ -17,7 +19,8 @@ const Contact = ({fetchError, isLoading}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    <h1 style={{textAlign: "center", marginTop: "200px"}}>Contact Us</h1>
+                    {/* <h1 style={{textAlign: "center", marginTop: "200px"}}>Contact Us</h1> */}
+                    <ContactContent />
                 </>
             }
         </div>
