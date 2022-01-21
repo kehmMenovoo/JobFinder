@@ -20,12 +20,17 @@ import SearchJobs from "./pages/Search/SearchJobs";
 
 function App() {
   const [data, setData] = useState([]);
+  const [popularData, setPopularData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
   const [search, setSearch] = useState('');
   const [valueSearch, setValueSearch] = useState('');
+  const [jobType, setJobType] = useState('');
+  const [jobTime, setJobTime] = useState('');
+  const [jobLevel, setJobLevel] = useState('');
 
-  const API_URL = 'http://localhost:3500/data';
+  const API_URL_All = 'http://localhost:3500/data';
+  const API_URL_POPULAR = 'http://localhost:3500/popular';
 
   const location = useLocation();
   const { pathname } = location;
@@ -34,10 +39,17 @@ function App() {
   useEffect(() => {
       const fetchItems = async () => {
           try{
-            const response = await fetch(API_URL);
+            // All data
+            const response = await fetch(API_URL_All);
             const listItems = await response.json();
             if(!response.ok) throw Error('Cannot Find Data!');
             setData(listItems);
+            // Popular data
+            const res = await fetch(API_URL_POPULAR);
+            const getPopular = await res.json();
+            if(!res.ok) throw Error('Cannot Find Data!');
+            setPopularData(getPopular);
+
             setFetchError(null);
           }
           catch(err) {
@@ -47,8 +59,7 @@ function App() {
             setIsLoading(false);
           }
         }
-
-        fetchItems();
+          fetchItems();
   }, []);
 
   const title=["Search", "Home", "Job Types", "Favorites", "Post", "Contact Us", "Job Information", "Register", 
@@ -80,7 +91,12 @@ function App() {
     if(valueSearch) setSearch(valueSearch);
     history.push('/search');
   }
-  let dataItem = data.filter(i => (i.company).toLowerCase().includes(search.toLowerCase()) || (i.position).toLowerCase().includes(search.toLowerCase()));
+
+  const dataCombined = popularData.concat(data);
+  let dataItem = dataCombined.filter(i => (i.company).toLowerCase().includes(search.toLowerCase()) || (i.position).toLowerCase().includes(search.toLowerCase()));
+  let dataCustomize = dataCombined.filter(item => item.entryLevel.toLowerCase().includes(jobLevel.toLowerCase()) 
+    && item.typeJob.toLowerCase().includes(jobType.toLowerCase()) 
+    && item.durationType.toLowerCase().includes(jobTime.toLowerCase()));
   
   return (
     <div className="App">
@@ -92,10 +108,13 @@ function App() {
               <SearchJobs data={dataItem} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route exact path="/">
-              <Home data={data} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
+              <Home data={popularData} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route path="/jobtype">
-              <TypeMenu data={data} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
+              <TypeMenu data={dataCustomize} 
+                isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} 
+                jobType={jobType} setJobType={setJobType} jobTime={jobTime} setJobTime={setJobTime} jobLevel={jobLevel} setJobLevel={setJobLevel}
+              />
             </Route>
             <Route path="/favorites">
               <Favorite fetchError={fetchError} isLoading={isLoading} />
@@ -108,7 +127,7 @@ function App() {
             </Route>
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
-            <Route path="/jobinfo">
+            <Route path="/jobinfo/:id">
               <JobInformation isLoading={isLoading} fetchError={fetchError} />
             </Route>
             <Route path="/nextpage" component={NextPage} />

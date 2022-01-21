@@ -1,8 +1,8 @@
-const DiffJobs = () => {
+const DiffJobs = ({jobType, setJobType}) => {
     return (
         <>
-            <select className="form-select" aria-label="Default select job-type">
-                <option value="All">All Types</option>
+            <select className="form-select" aria-label="Default select job-type" value={jobType} onChange={e => setJobType(e.target.value)}>
+                <option value="">All Types</option>
                 <option value="agriculture">Agriculture, Food, and Natural Resources</option>
                 <option value="architecture">Architecture and Construction</option>
                 <option value="art">Arts, Audio/Video Technology, and Communication</option>

@@ -1,4 +1,6 @@
 import Contents from "../Home/Body/Contents";
+import FooterMenu from "../Home/Footer/FooterMenu";
+import Copyright from "../Home/Footer/Copyright";
 
 const SearchJobs = ({data, fetchError, isLoading, search, splitLocation}) => {
 
@@ -12,6 +14,8 @@ const SearchJobs = ({data, fetchError, isLoading, search, splitLocation}) => {
                 search={search}
                 splitLocation={splitLocation}
             />
+            <FooterMenu />
+            <Copyright />
         </div>
     )
 }

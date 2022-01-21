@@ -15,7 +15,7 @@ const JobItems = ({data, isLoading, search, splitLocation}) => {
                     </div>
                 </div>
                 <div className="container">
-                    <div className="row">                             
+                    <div className="row">
                         {data.map(item => (
                             <Job key={item.id} item={item} />
                         ))}

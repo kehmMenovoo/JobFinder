@@ -2,51 +2,148 @@
     "data": [
         {
             "id": 1,
-            "avatar": "./images/x-water.jpg",
-            "company": "XWATER TECHNOLOGY CO., LTD",
-            "location": "Phnom Penh, Cambodia",
+            "avatar": "./images/JOBFINDER.png",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager/ Sales..."
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
         },
         {
             "id": 2,
-            "avatar": "./images/x-water.jpg",
-            "company": "XWATER TECHNOLOGY CO., LTD",
-            "location": "Phnom Penh, Cambodia",
+            "avatar": "./images/JOBFINDER.png",
+            "company": "What is Your Brand?",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Marketing Manager..."
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
         },
         {
             "id": 3,
-            "avatar": "./images/x-water.jpg",
-            "company": "XWATER TECHNOLOGY CO., LTD",
-            "location": "Phnom Penh, Cambodia",
+            "avatar": "./images/JOBFINDER.png",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "Senior Manager / Accounting Manager / Sales Manager/ Sales..."
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
         },
         {
             "id": 4,
-            "avatar": "./images/x-water.jpg",
-            "company": "XWATER TECHNOLOGY CO., LTD",
-            "location": "Phnom Penh, Cambodia",
+            "avatar": "./images/JOBFINDER.png",
+            "company": "What is Your Brand?",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Accounting Manager / Sales Manager, Sales..."
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
         },
         {
             "id": 5,
             "avatar": "./images/JOBFINDER.png",
-            "company": "XWATER TECHNOLOGY CO., LTD",
-            "location": "Phnom Penh, Cambodia",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales..."
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
         },
         {
             "id": 6,
             "avatar": "./images/JOBFINDER.png",
-            "company": "What is Your Brand? I am on here.",
-            "location": "Phnom Penh, Cambodia",
+            "company": "What is Your Brand?",
+            "location": "Phnom Penh,...",
             "due": "13 Mar, 2022",
-            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales..."
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
+        },
+        {
+            "id": 7,
+            "avatar": "./images/JOBFINDER.png",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
+            "due": "13 Mar, 2022",
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
+        },
+        {
+            "id": 8,
+            "avatar": "./images/JOBFINDER.png",
+            "company": "What is Your Brand?",
+            "location": "Phnom Penh,...",
+            "due": "13 Mar, 2022",
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
+        },
+        {
+            "id": 9,
+            "avatar": "./images/JOBFINDER.png",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
+            "due": "13 Mar, 2022",
+            "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experience"
+        },
+        {
+            "id": 10,
+            "avatar": "./images/JOBFINDER.png",
+            "company": "What is Your Brand?",
+            "location": "Phnom Penh,...",
+            "due": "13 Mar, 2022",
+            "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+            "typeJob": "business",
+            "durationType": "temporary",
+            "entryLevel": "experience"
+        }
+    ],
+    "popular": [
+        {
+            "id": 11,
+            "avatar": "./images/x-water.jpg",
+            "company": "XWATER TECHNOLOGY...",
+            "location": "Phnom Penh,...",
+            "due": "13 Mar, 2022",
+            "position": "HR & Admin Officer / Information Technology / Sales Manager/ Sales...",
+            "typeJob": "IT",
+            "durationType": "full-time",
+            "entryLevel": "experienced"
+        },
+        {
+            "id": 12,
+            "avatar": "./images/Bred.jpg",
+            "company": "BRED Bank (Cambodia) Plc.,",
+            "location": "Phnom Penh,...",
+            "due": "24 Jun, 2022",
+            "position": "Senior Relationship Manager, International Corporate / Senior...",
+            "typeJob": "business",
+            "durationType": "volunteer",
+            "entryLevel": "entry"
+        },
+        {
+            "id": 13,
+            "avatar": "./images/CircleReno.jpg",
+            "company": "Circle Renovation (Cam...",
+            "location": "Phnom Penh,...",
+            "due": " 04 May, 2022",
+            "position": "Interior Designer / Architect, Site Engineer, Site Architect, ...",
+            "typeJob": "architecture",
+            "durationType": "full-time",
+            "entryLevel": "entry"
         }
     ]
 }

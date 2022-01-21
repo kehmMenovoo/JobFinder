@@ -59,22 +59,22 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites">
-                                            <span className="iconify" data-icon="ant-design:heart-outlined"></span>
-                                        </Link>
-                                    </div>
-                                    <div>
-                                        <p className="tooltips">Favorites</p>
-                                    </div>
-                                </li>
-                                <li className="nav-item">
-                                    <div>
                                         <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
                                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
                                         </Link>
                                     </div>
                                     <div>
                                         <p className="tooltips">Upload</p>
+                                    </div>
+                                </li>
+                                <li className="nav-item">
+                                    <div>
+                                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites">
+                                            <span className="iconify" data-icon="ant-design:heart-outlined"></span>
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <p className="tooltips">Favorites</p>
                                     </div>
                                 </li>
                                 <li className="nav-item">
@@ -109,11 +109,11 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
                         <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to="/jobtype">
                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
                         </Link>
-                        <Link className="nav-link" to="/favorites">
-                            <span className="iconify" data-icon="ant-design:heart-outlined"></span>
-                        </Link>
                         <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
+                        </Link>
+                        <Link className="nav-link" to="/favorites">
+                            <span className="iconify" data-icon="ant-design:heart-outlined"></span>
                         </Link>
                         <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact">
                             <span className="iconify" data-icon="bx:bx-phone"></span>

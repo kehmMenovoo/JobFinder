@@ -58,6 +58,36 @@ body .home {
   background-color: #f8f9fa;
 }
 
+#loading2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+}
+#loading2 svg polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#loading2 svg polyline#back {
+  stroke: rgba(43, 149, 255, 0.2);
+}
+#loading2 svg polyline#front {
+  stroke: #2b95ff;
+  stroke-dasharray: 12, 36;
+  stroke-dashoffset: 48;
+  animation: dash 1s linear infinite;
+}
+
+@keyframes dash {
+  62.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /* navigation bar  */
 .navbar {
   background-color: white;
@@ -159,7 +189,7 @@ body .home {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 4px 8px;
-  margin-top: 13px;
+  margin-top: 10px;
   display: none;
 }
 .navbar .collapse.navbar-collapse .menu-item .nav-item:hover .tooltips {

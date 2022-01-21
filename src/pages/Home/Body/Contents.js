@@ -6,12 +6,12 @@ const Contents = ({data, fetchError, isLoading, search, splitLocation}) => {
             <main id="job-content">
                 {isLoading && 
                     <div>
-                        <div class="d-flex justify-content-center" style={{marginTop: "100px", marginBottom: "10px"}}>
-                            <div class="spinner-border" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
+                        <div id="loading2"> 
+                            <svg width="16px" height="12px">
+                                <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                                <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                            </svg>
                         </div>
-                        <p style={{textAlign: "center", marginBottom: "100px"}}>Loading...</p>
                     </div>
                 }
                 {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}

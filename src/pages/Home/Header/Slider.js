@@ -1,4 +1,3 @@
-// import JobSlider from '../../../images/JobSlider.jpg';
 
 const Slider = () => {
     return (
@@ -11,7 +10,7 @@ const Slider = () => {
                     </div>
                     <div className="slider-content">
                         <div className="welcome">
-                            <h1>Welcome to <span style={{color: "#2b95ff"}} >Khom Rok</span> site</h1>
+                            <h1>Welcome to <span style={{color: "#2b95ff"}} ><a href="/" style={{textDecoration: "none"}}>Khom Rok</a></span> site</h1>
                             <p>Discover your next career move, freelance gig, or internship</p>
                         </div>
 

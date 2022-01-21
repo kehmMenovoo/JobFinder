@@ -1,7 +1,8 @@
-const DurationJobs = () => {
+const DurationJobs = ({jobTime, setJobTime}) => {
     return (
         <>
-            <select className="form-select" aria-label="Default select job-time">
+            <select className="form-select" aria-label="Default select job-time" value={jobTime} onChange={e => setJobTime(e.target.value)}>
+                <option value="">Defualt Time</option>
                 <option value="full-time">Full-Time</option>
                 <option value="part-time">Part-Time</option>
                 <option value="volunteer">Volunteer</option>

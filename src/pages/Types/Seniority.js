@@ -1,7 +1,8 @@
-const Seniority = () => {
+const Seniority = ({jobLevel, setJobLevel}) => {
     return (
         <>
-            <select className="form-select" aria-label="Default select seniority">
+            <select className="form-select" aria-label="Default select seniority" value={jobLevel} onChange={e => setJobLevel(e.target.value)}>
+                <option value="">Default Level</option>
                 <option value="entry">Entry-Level</option>
                 <option value="experienced">Experienced Level</option>
                 <option value="executive">Executive</option>
