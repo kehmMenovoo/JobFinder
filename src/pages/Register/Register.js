@@ -1,7 +1,7 @@
 const Register = () => {
     return (
-        <div style={{backgroundColor: "red", margin: "200px"}}>
-            <h1>Register</h1>
+        <div>
+            <h1 style={{textAlign: "center", marginTop: "200px"}}>Register...</h1>
         </div>
     )
 }

@@ -64,25 +64,25 @@ function App() {
 
   const title=["Search", "Home", "Job Types", "Favorites", "Post", "Contact Us", "Job Information", "Register", 
     "Sign in", "Browse Freelancer", "Post Project", "About", "Privacy", "Term of Use", "Page Not Found"];
-  const main = "Khom Rok | ";
+  const main = " | Khom Rok";
   const titleName = document.querySelector("title");
 
   switch(splitLocation[1]) {
-    case "search": titleName.innerHTML = main + title[0] + " for - " + search; break;
-    case "": titleName.innerHTML = main + title[1]; break;
-    case "jobtype": titleName.innerHTML = main + title[2]; break;
-    case "favorites": titleName.innerHTML = main + title[3]; break;
-    case "post": titleName.innerHTML = main + title[4]; break;
-    case "contact": titleName.innerHTML = main + title[5]; break;
-    case "jobinfo": titleName.innerHTML = main + title[6]; break;
-    case "register": titleName.innerHTML = main + title[7]; break;
-    case "sign_in": titleName.innerHTML = main + title[8]; break;
-    case "browsefreelancer": titleName.innerHTML = main + title[9]; break;
-    case "postproject": titleName.innerHTML = main + title[10]; break;
-    case "about": titleName.innerHTML = main + title[11]; break;
-    case "privacy": titleName.innerHTML = main + title[12]; break;
-    case "termofuse": titleName.innerHTML = main + title[13]; break;
-    default: titleName.innerHTML = main + title[14];
+    case "search": titleName.innerHTML = title[0] + " for - " + search + main; break;
+    case "": titleName.innerHTML = title[1] + main; break;
+    case "jobtype": titleName.innerHTML = title[2] + main; break;
+    case "favorites": titleName.innerHTML = title[3] + main; break;
+    case "post": titleName.innerHTML = title[4] + main; break;
+    case "contact": titleName.innerHTML = title[5] + main; break;
+    case "jobinfo": titleName.innerHTML = title[6] + main; break;
+    case "register": titleName.innerHTML = title[7] + main; break;
+    case "sign_in": titleName.innerHTML = title[8] + main; break;
+    case "browsefreelancer": titleName.innerHTML = title[9] + main; break;
+    case "postproject": titleName.innerHTML = title[10] + main; break;
+    case "about": titleName.innerHTML = title[11] + main; break;
+    case "privacy": titleName.innerHTML = title[12] + main; break;
+    case "termofuse": titleName.innerHTML = title[13] + main; break;
+    default: titleName.innerHTML = title[14] + main;
   }
   const history = useHistory();
 

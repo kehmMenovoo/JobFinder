@@ -1,4 +1,5 @@
 import Job from "./Job";
+import sadRobot from "../../../images/robot-sad.png";
 
 const JobItems = ({data, isLoading, search, splitLocation}) => {
 
@@ -19,7 +20,11 @@ const JobItems = ({data, isLoading, search, splitLocation}) => {
                         {data.map(item => (
                             <Job key={item.id} item={item} />
                         ))}
-                        {!isLoading && data.length === 0 ? (<h3 style={{textAlign: "center", color: "gray", marginTop: "100px", marginBottom: "100px"}}>No post in this moment!</h3>) : ""}
+                        {!isLoading && data.length === 0 ? (
+                            <div style={{textAlign: "center", color: "gray", marginTop: "100px", marginBottom: "150px", minHeight: "40vh"}}>
+                                <img src={sadRobot} className="mb-3" alt="Not Found" width="150px"/>
+                                <h3>No post in this moment!</h3>
+                            </div>) : ""}
                     </div>
                 </div>
             </div>

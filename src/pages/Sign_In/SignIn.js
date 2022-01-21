@@ -1,7 +1,7 @@
 const SignIn = () => {
     return (
-        <div style={{backgroundColor: "red", margin: "200px"}}>
-            <h1>Sign in</h1>
+        <div>
+            <h1 style={{textAlign: "center", marginTop: "200px"}}>Sign in</h1>
         </div>
     )
 }

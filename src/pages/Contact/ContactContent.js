@@ -1,4 +1,11 @@
+import { Editor } from '@tinymce/tinymce-react';
+
 const ContactContent = () => {
+
+    const handleEditorChange = (e) => {
+        console.log('Content was updated:', e.target.getContent());
+    }
+
     return (
         <>
             <div className="wrapper">
@@ -39,8 +46,20 @@ const ContactContent = () => {
                                                 <form>
                                                     <div className="mt-4 inputs">
                                                         <input type="name" className="form-control" placeholder="Name" required /> 
-                                                        <input type="email" className="form-control" placeholder="Email" required />
-                                                        <textarea className="form-control-t" placeholder="Type your message" required></textarea> 
+                                                        <input type="email" className="form-control" placeholder="Email" required /><br />
+                                                        <Editor
+                                                            className="form-control-t"
+                                                            init={{
+                                                                menubar: false,
+                                                                plugins: 'link image code',
+                                                                toolbar: 'undo redo | bold italic underline link strikethrough blockquote align bullist numlist backcolor | removeformat help fullscreen ',
+                                                                toolbar_location: 'bottom',
+                                                                statusbar: false,
+                                                                placeholder: "Type your message...",
+
+                                                            }}
+                                                            onChange={handleEditorChange}
+                                                        />
                                                     </div>
                                                     <div className="button mt-4 text-left"> 
                                                         <button type="submit" className="btn btn-dark">Send</button> 
