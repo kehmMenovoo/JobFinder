@@ -37,7 +37,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 body .home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(2, 20, 37, 0.829)), url("../JobSlider.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(2, 20, 37, 0.829)), url("../images/JobSlider.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -733,4 +733,4 @@ footer .row .f-menu a:hover {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@ const PostJob = ({fetchError, isLoading}) => {
     return (
         
         <div>
-             {isLoading && 
+            {isLoading && 
                 <div style={{width: "100%", height: "100%", position: "fixed", zIndex: "9999999"}}>
                     <div class="d-flex justify-content-center loading" style={{display: "flex", flexDirection: "column", gap: "10px", justifyContent: "center", alignItems: "center", height: "100%"}}>
                         <div id="loading2"> 

@@ -26,4 +26,4 @@ const Favorite = ({fetchError, isLoading}) => {
     )
 }
 
-export default Favorite
+export default Favorite;

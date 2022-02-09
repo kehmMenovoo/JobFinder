@@ -6,4 +6,4 @@ const PostProject = () => {
     )
 }
 
-export default PostProject
+export default PostProject;

@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 
 const Job = ({item}) => {
+
     return (
-        <div className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
+        <article className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
             <div className="card text-dark mb-3">
                 <Link to={`/jobinfo/${item.id}`}>
                     <div className="card-header">
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src={item.avatar} alt="item" className="img-fluid rounded-start" />
+                                <img src={item.avatar} alt="item" width="212px" height="111px" className="img-fluid rounded-start" />
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
@@ -53,7 +54,7 @@ const Job = ({item}) => {
                     </div>
                 </div>
             </div>
-        </div>   
+        </article>   
         
     )
 }

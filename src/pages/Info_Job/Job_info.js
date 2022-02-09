@@ -1,4 +1,10 @@
-const JobInformation = ({fetchError, isLoading}) => {
+// import { useParams } from 'react-router-dom';
+
+const Job_info = ({isLoading, fetchError, allData}) => {
+    // const {id} = useParams();
+    // const data = allData.find(post => (post.id).toString() === id);
+    document.getElementById("web_icon").href = "../../images/JOBFINDER.png";
+
     return (
         <div>
             {isLoading && 
@@ -17,11 +23,11 @@ const JobInformation = ({fetchError, isLoading}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    <h1 style={{textAlign: "center", marginTop: "200px"}}>Job Information...</h1>
+                    <h2 style={{marginTop: "200px", textAlign: "center"}}>Postpage Information</h2>
                 </>
             }
         </div>
     )
 }
 
-export default JobInformation
+export default Job_info

@@ -24,7 +24,8 @@ const JobItems = ({data, isLoading, search, splitLocation}) => {
                             <div style={{textAlign: "center", color: "gray", marginTop: "100px", marginBottom: "150px", minHeight: "40vh"}}>
                                 <img src={sadRobot} className="mb-3" alt="Not Found" width="150px"/>
                                 <h3>No post in this moment!</h3>
-                            </div>) : ""}
+                            </div>) 
+                        : ""}
                     </div>
                 </div>
             </div>

@@ -8,7 +8,6 @@ import Post from './pages/Post/Post';
 import Contact from "./pages/Contact/Contact";
 import Register from "./pages/Register/Register";
 import SignIn from "./pages/Sign_In/SignIn";
-import JobInformation from "./pages/JobInfo/JobInformation";
 import NextPage from "./pages/Home/Body/NextPage";
 import BrowseFreelancer from "./pages/Post/BrowseFreelancer";
 import PostProject from "./pages/Post/PostProject";
@@ -17,6 +16,8 @@ import Privacy from "./pages/Privacy/Privacy";
 import TermOfUse from "./pages/TermOfUse/TermOfUse";
 import Missing from "./pages/Error/Missing";
 import SearchJobs from "./pages/Search/SearchJobs";
+import JobInfo from "./pages/Info_Job/Job_info";
+// import JOBFINDER from "./images/JOBFINDER.png";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,6 +32,8 @@ function App() {
 
   const API_URL_All = 'http://localhost:3500/data';
   const API_URL_POPULAR = 'http://localhost:3500/popular';
+
+  document.getElementById("web_icon").href = "./images/JOBFINDER.png";
 
   const location = useLocation();
   const { pathname } = location;
@@ -127,8 +130,9 @@ function App() {
             </Route>
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
-            <Route path="/jobinfo/:id">
-              <JobInformation isLoading={isLoading} fetchError={fetchError} />
+            <Route path="/jobinfo">
+            {/* <Route path="/jobinfo"> */}
+              <JobInfo isLoading={isLoading} fetchError={fetchError} allData={dataCombined} />
             </Route>
             <Route path="/nextpage" component={NextPage} />
             <Route path="/browsefreelancer" component={BrowseFreelancer} />

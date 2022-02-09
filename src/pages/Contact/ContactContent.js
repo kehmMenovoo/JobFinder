@@ -52,7 +52,7 @@ const ContactContent = () => {
                                                             init={{
                                                                 menubar: false,
                                                                 plugins: 'link image code',
-                                                                toolbar: 'undo redo | bold italic underline link strikethrough blockquote align bullist numlist backcolor | removeformat help fullscreen ',
+                                                                toolbar: 'undo redo | bold italic underline link strikethrough blockquote align backcolor | removeformat help fullscreen ',
                                                                 toolbar_location: 'bottom',
                                                                 statusbar: false,
                                                                 placeholder: "Type your message...",
