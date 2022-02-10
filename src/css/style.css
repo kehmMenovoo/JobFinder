@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-.wrapper .col-md-6 .text-center .button, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
   display: flex;
   align-items: center;
 }
 
-main .container .row .card .card-footer .content .share-job, main .container .row .card .card-footer .content .add-fav, main .container .row .card .card-footer .content .apply {
+.job-sidebar .button-apply .share-job, .job-sidebar .button-apply .add-fav, .job-sidebar .button-apply .apply, main .container .row .card .card-footer .content .share-job, main .container .row .card .card-footer .content .add-fav, main .container .row .card .card-footer .content .apply {
   color: #2b95ff;
 }
-main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
   border: none;
   border-radius: 50%;
   padding: 5px;
@@ -18,13 +18,13 @@ main .container .row .card .card-footer .content .share-job button, main .contai
   font-size: 20px;
   background-color: unset;
 }
-main .container .row .card .card-footer .content .share-job button .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button .iconify:nth-child(2) {
+.job-sidebar .button-apply .share-job button .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button .iconify:nth-child(2), .job-sidebar .button-apply .apply button .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button .iconify:nth-child(2) {
   display: none;
 }
-main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(1) {
+.job-sidebar .button-apply .share-job button:hover .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(1), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(1), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(1) {
   display: none;
 }
-main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(2) {
+.job-sidebar .button-apply .share-job button:hover .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(2), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(2), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(2) {
   display: block;
 }
 
@@ -93,6 +93,7 @@ body .home {
   background-color: white;
   position: fixed;
   display: block;
+  box-shadow: 0px 0.2px 2px 0.5px rgba(0, 0, 0, 0.2);
   top: 0;
   width: 100%;
   z-index: 9999;
@@ -446,6 +447,67 @@ footer .row .f-menu a:hover {
 }
 .type-page .types-menu form .form-select:nth-child(3) {
   width: 120px;
+}
+
+.job-sidebar {
+  background-color: white;
+  width: 400px;
+  height: 88vh;
+  margin: 0 10px 10px 10px;
+  border-radius: 10px;
+  position: fixed;
+  padding: 20px;
+}
+.job-sidebar .info-logo {
+  width: 100%;
+  display: flex;
+  border-bottom: 0.5px solid #2b95ff;
+  padding-bottom: 10px;
+}
+.job-sidebar .info-logo img {
+  width: 150px;
+  margin: 5px;
+}
+.job-sidebar .button-apply {
+  width: 100%;
+  background-color: #f8f9fa;
+  margin-left: -20px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  justify-content: center;
+  gap: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.job-sidebar .button-apply .apply .iconify {
+  font-size: 25px;
+}
+.job-sidebar .button-apply .add-fav .iconify {
+  font-size: 25px;
+}
+.job-sidebar .button-apply .share-job .iconify {
+  font-size: 25px;
+}
+
+.info-content {
+  background-color: white;
+  min-height: 100vh;
+  margin: 70px 10px 10px 420px;
+  border-radius: 10px;
+  padding: 50px 60px;
+}
+.info-content table tr td {
+  padding-left: 10px;
+}
+.info-content table tr td b {
+  color: #2b95ff;
+}
+.info-content table tr td:nth-child(2) {
+  color: #4e4e4e;
+}
+.info-content table tr .closing {
+  color: #ff0055;
 }
 
 .wrapper {

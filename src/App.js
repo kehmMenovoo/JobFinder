@@ -130,8 +130,7 @@ function App() {
             </Route>
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
-            <Route path="/jobinfo">
-            {/* <Route path="/jobinfo"> */}
+            <Route path="/jobinfo/:id">
               <JobInfo isLoading={isLoading} fetchError={fetchError} allData={dataCombined} />
             </Route>
             <Route path="/nextpage" component={NextPage} />

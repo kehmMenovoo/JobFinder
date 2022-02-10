@@ -75,15 +75,15 @@
                 border-bottom: 2px solid #eee;
                 width: 100%;
                 min-height: 20px;
-            }
-            
-            .inputs .form-control-t:focus {
-                margin-bottom: 13px;
-                border: none;
-                border-bottom: 2px solid $main-color;
-                box-shadow: none;
-                resize: none;
-                outline: none;
+
+                &:focus {
+                    margin-bottom: 13px;
+                    border: none;
+                    border-bottom: 2px solid $main-color;
+                    box-shadow: none;
+                    resize: none;
+                    outline: none;
+                }
             }
 
             .form-control {

@@ -19,7 +19,6 @@ const Contact = ({fetchError, isLoading}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    {/* <h1 style={{textAlign: "center", marginTop: "200px"}}>Contact Us</h1> */}
                     <ContactContent />
                 </>
             }

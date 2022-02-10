@@ -1,0 +1,80 @@
+.job-sidebar {
+    background-color: white;
+    width: 400px;
+    height: 88vh;
+    margin: 0 10px 10px 10px;
+    border-radius: 10px;
+    position: fixed;
+    padding: 20px;
+    .info-logo {
+        width: 100%;
+        display: flex;
+        border-bottom: 0.5px solid $main-color;
+        padding-bottom: 10px;
+
+        img {
+            width: 150px;
+            margin: 5px;
+        }
+    }
+
+    .button-apply {
+        @extend %flex-box;
+        width: 100%;
+        background-color: $white;
+        margin-left: -20px;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        justify-content: center;
+        gap: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .apply {
+            @extend %btn-highlight;
+            
+            .iconify {
+                font-size: 25px;
+            }
+        }
+        .add-fav {
+            @extend %btn-highlight;
+            .iconify {
+                font-size: 25px;
+            }
+        }
+        .share-job {
+            @extend %btn-highlight;
+            .iconify {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.info-content {
+    background-color: white;
+    min-height: 100vh;
+    margin: 70px 10px 10px 420px;
+    border-radius: 10px;
+    padding: 50px 60px;
+
+    table tr {
+        td {
+            padding-left: 10px;
+
+            b {
+                color: $main-color;
+            }
+        }
+        td:nth-child(2) {
+            color: rgb(78, 78, 78);
+        }
+
+        .closing {
+            color: $register;
+        }
+    }
+
+}

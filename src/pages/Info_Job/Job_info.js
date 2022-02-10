@@ -1,8 +1,9 @@
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import InfoContent from './InfoContent';
 
 const Job_info = ({isLoading, fetchError, allData}) => {
-    // const {id} = useParams();
-    // const data = allData.find(post => (post.id).toString() === id);
+    const {id} = useParams();
+    const data = allData.find(post => (post.id).toString() === id);
     document.getElementById("web_icon").href = "../../images/JOBFINDER.png";
 
     return (
@@ -23,7 +24,7 @@ const Job_info = ({isLoading, fetchError, allData}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    <h2 style={{marginTop: "200px", textAlign: "center"}}>Postpage Information</h2>
+                    <InfoContent data={data} />
                 </>
             }
         </div>
