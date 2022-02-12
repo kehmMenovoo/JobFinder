@@ -2,10 +2,21 @@ import { Link } from 'react-router-dom';
 
 const Job = ({item}) => {
 
+    const shrink = (str, length) => {
+        if(str.length > length) {
+            str = str.slice(0, length) + "..."
+        }
+
+        return str;
+    }
+    const toTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <article className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
             <div className="card text-dark mb-3">
-                <Link to={`/jobinfo/${item.id}`}>
+                <Link to={`/jobinfo/${item.id}`} onClick={toTop}>
                     <div className="card-header">
                         <div className="row g-0">
                             <div className="col-md-4">
@@ -13,8 +24,8 @@ const Job = ({item}) => {
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
-                                    <h5 className="card-title">{item.company}</h5>
-                                    <p className="card-text area"><span className="iconify" data-icon="entypo:location"></span> {item.location}</p>
+                                    <h5 className="card-title">{shrink(item.company, 19)}</h5>
+                                    <p className="card-text area"><span className="iconify" data-icon="entypo:location"></span> {shrink(item.location, 11)}</p>
                                     <p className="card-text date"><small className="text-muted">Due: {item.due}</small></p>
                                 </div>
                             </div>
@@ -22,7 +33,7 @@ const Job = ({item}) => {
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">We are looking for:</h5>
-                        <p className="card-text">{item.position}</p>
+                        <p className="card-text">{shrink(item.position, 56)}</p>
                     </div>
                 </Link>
                 <div className="card-footer">

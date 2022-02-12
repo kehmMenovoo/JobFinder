@@ -8,6 +8,7 @@ const InfoContent = ({data}) => {
         }
         return splitStr.join(' '); 
     }
+    
     return (
         <>
             <div className="job-sidebar">
@@ -22,8 +23,8 @@ const InfoContent = ({data}) => {
                         </div>
                     </div><br />
                     <div className="info-position">
-                        <p style={{color: "rgb(43, 149, 255)"}}><b>We are hiring:</b></p>
-                        <p>{data.position}</p>
+                        <p><b>We are hiring:</b></p>
+                        <p style={{color: "rgb(43, 149, 255)"}}>{data.position}</p>
                     </div>
                 </>
                 <div className="button-apply">
@@ -81,24 +82,35 @@ const InfoContent = ({data}) => {
                             <td><b>Job Location </b></td>
                             <td>: {titleCase(data.location)}</td>
                         </tr>
-                        <tr>
-                            <td><b>Department </b></td>
-                            <td>: {titleCase(data.department)}</td>
-                        </tr>
-                        <tr>
-                            <td><b>Sub-department </b></td>
-                            <td>: {titleCase(data.subDepartment)}</td>
-                        </tr>
-                        <tr>
-                            <td><b>Report to </b></td>
-                            <td>: {titleCase(data.Report)}</td>
-                        </tr>
+                        {data.department ? ( 
+                            <tr>
+                                <td><b>Department </b></td>
+                                <td>: {titleCase(data.department)}</td>
+                            </tr>) 
+                            : null
+                        }
+                        {data.subDepartment ? (
+                             <tr>
+                                <td><b>Sub-department </b></td>
+                                <td>: {titleCase(data.subDepartment)}</td>
+                            </tr>)
+                            : null
+                        }
+                        {data.report ? (
+                            <tr>
+                                <td><b>Report to </b></td>
+                                <td>: {titleCase(data.Report)}</td>
+                            </tr>)
+                            : null
+                        }
                     </table>
                     <br />
 
                     <div className="job-description">
                         <h4>Job Description</h4>
-                        <p>{data.description}</p>
+                        <div className="detailed">
+                            <p>{data.description}</p>
+                        </div>
                     </div>
                 </div>
 

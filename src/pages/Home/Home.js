@@ -3,7 +3,7 @@ import Contents from "./Body/Contents";
 import FooterMenu from "./Footer/FooterMenu";
 import Copyright from "./Footer/Copyright";
 
-const Home = ({data, isLoading, fetchError, search, splitLocation}) => {
+const Home = ({data, isLoading, fetchError, search, splitLocation, pageCount, handlePageClick}) => {
 
     return (
         <div className="home">
@@ -36,6 +36,8 @@ const Home = ({data, isLoading, fetchError, search, splitLocation}) => {
                             isLoading={isLoading}
                             search={search}
                             splitLocation={splitLocation}
+                            pageCount={pageCount}
+                            handlePageClick={handlePageClick}
                         />
                         <FooterMenu />
                         <Copyright />

@@ -1,8 +1,9 @@
 import Job from "./Job";
 import sadRobot from "../../../images/robot-sad.png";
+import ReactPaginate from "react-paginate";
 
-const JobItems = ({data, isLoading, search, splitLocation}) => {
-
+const JobItems = ({data, isLoading, search, splitLocation, pageCount, handlePageClick}) => {
+  
     return (
         <>
             <div className="content-container">
@@ -29,26 +30,28 @@ const JobItems = ({data, isLoading, search, splitLocation}) => {
                     </div>
                 </div>
             </div>
-
-            {/* {data.length > 40 ? (
-                <nav aria-label="Page navigation" className="pagination-content d-flex justify-content-center mt-3">
-                    <ul className="pagination">
-                        <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item">
-                            <a className="page-link" href="/nextpage" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            ):(null)} */}
+           
+           {pageCount > 1 ? 
+                <ReactPaginate
+                    previousLabel={"<<"}
+                    nextLabel={">>"}
+                    breakLabel={"..."}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination justify-content-center"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active"}
+                />: null
+            }
         </>
     )
 }

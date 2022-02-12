@@ -5,6 +5,8 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
 
     const navLink = "nav-link";
     
+    document.getElementById("web_icon").href = "../../images/JOBFINDER.png";
+    
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,7 +51,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to="/jobtype">
+                                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`}>
                                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
                                         </Link>
                                     </div>

@@ -86,19 +86,29 @@
                     width: 100%;
                 }
                 .nav-link.active {
-                    background-color: rgb(233, 233, 233);
+                    background-color: rgba(43, 149, 255, 0.8);
                     border-radius: 10px;
                     color: $main-color;
 
                     & .iconify {
+                        color: white;
+                    }
+                }
+                .nav-link:hover {
+                    background-color: rgb(233, 233, 233);
+                    border-radius: 10px;
+
+                    & .iconify{
+                        transform: scale(1.1);
                         color: $main-color;
                     }
                 }
-                .nav-link:hover .iconify{
-                    transform: scale(1.1)
-                }
-                .nav-link.active:hover .iconify {
+                .nav-link.active:hover {
+                    background-color: rgba(43, 149, 255, 0.8);
+
+                    & .iconify {
                     transform: none;
+                    }
                 }
             }
             .nav-item {
@@ -281,6 +291,8 @@ main {
                 max-width: 18rem;
                 .card-header {
                     background-color: white;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
                     .img-fluid {
                         margin-top: 20px;
                     }
@@ -301,6 +313,7 @@ main {
                     }
                 }
                 .card-body {
+                    height: 120px;
 
                     .card-title {
                         font-size: 15px;
@@ -332,7 +345,17 @@ main {
         }
     }
 }
+.pagination {
+    gap: 10px;
 
+    .page-link {
+        border-radius: 5px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
 footer {
     margin-top: 30px;
     .row {

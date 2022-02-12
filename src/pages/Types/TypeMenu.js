@@ -5,7 +5,7 @@ import Contents from "../Home/Body/Contents";
 import FooterMenu from "../Home/Footer/FooterMenu";
 import Copyright from "../Home/Footer/Copyright";
 
-const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel}) => {
+const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel, pageCount, handlePageClick}) => {
     return (
         <div className="type-page">
              {isLoading && 
@@ -52,6 +52,8 @@ const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, 
                             fetchError={fetchError}
                             search={search}
                             splitLocation={splitLocation}
+                            pageCount={pageCount}
+                            handlePageClick={handlePageClick}
                         />
                     </main>
                     <FooterMenu />
