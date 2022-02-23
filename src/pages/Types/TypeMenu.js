@@ -5,11 +5,12 @@ import Contents from "../Home/Body/Contents";
 import FooterMenu from "../Home/Footer/FooterMenu";
 import Copyright from "../Home/Footer/Copyright";
 
-const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel, pageCount, handlePageClick}) => {
+const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel , pageCount, handlePageClick, currentPage }) => {
+    console.log(splitLocation[1]);
     return (
         <div className="type-page">
-             {isLoading && 
-                <div style={{width: "100%", height: "100%", position: "fixed", zIndex: "9999999"}}>
+            {isLoading && 
+                <div style={{width: "100%", height: "100%", position: "fixed", zIndex: "9999999", background: "white"}}>
                     <div class="d-flex justify-content-center loading" style={{display: "flex", flexDirection: "column", gap: "10px", justifyContent: "center", alignItems: "center", height: "100%"}}>
                         <div id="loading2"> 
                             <svg width="16px" height="12px">
@@ -54,6 +55,7 @@ const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, 
                             splitLocation={splitLocation}
                             pageCount={pageCount}
                             handlePageClick={handlePageClick}
+                            currentPage={currentPage}
                         />
                     </main>
                     <FooterMenu />

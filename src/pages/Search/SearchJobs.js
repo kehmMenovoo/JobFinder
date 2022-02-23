@@ -4,7 +4,6 @@ import Copyright from "../Home/Footer/Copyright";
 
 const SearchJobs = ({data, fetchError, isLoading, search, splitLocation}) => {
 
-    
     return (
         <div style={{marginTop: "80px"}}>
             <Contents 

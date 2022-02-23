@@ -1,11 +1,11 @@
 import JOBFINDER from '../../../images/JOBFINDER.png';
 import { Link } from "react-router-dom";
 
-const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
+const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch, 
+    // pageAddress
+    }) => {
 
     const navLink = "nav-link";
-    
-    document.getElementById("web_icon").href = "../../images/JOBFINDER.png";
     
     return (
         <>
@@ -108,7 +108,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch}) => {
                         <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} aria-current="page" to="/" >
                             <span class="iconify" data-icon="ant-design:home-outlined"></span>
                         </Link>
-                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to="/jobtype">
+                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`} >
                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
                         </Link>
                         <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">

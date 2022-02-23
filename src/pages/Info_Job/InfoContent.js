@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const InfoContent = ({data}) => {
+const InfoContent = ({data, history}) => {
     function titleCase(str) {
         var splitStr = str.split(' ');
         for (var i = 0; i < splitStr.length; i++) {
@@ -8,11 +8,24 @@ const InfoContent = ({data}) => {
         }
         return splitStr.join(' '); 
     }
+
+    const goBack = () => {
+        history.goBack();
+    }
     
     return (
         <>
             <div className="job-sidebar">
                 <>
+                    <div className="tools">
+                        <div className="back-btn" onClick={goBack}>
+                            <span className="iconify" data-icon="bi:arrow-left-short"></span>
+                            <span className="iconify" data-icon="bi:arrow-left-circle-fill"></span>
+                        </div>
+                        <div className="more-tools">
+                            <span class="iconify" data-icon="bi:three-dots-vertical"></span>
+                        </div>
+                    </div>
                     <div className="info-logo">
                         <div>
                             <img src={data.avatar} alt={data.id} />

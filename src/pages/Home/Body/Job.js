@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Job = ({item}) => {
 
@@ -14,7 +15,7 @@ const Job = ({item}) => {
     }
 
     return (
-        <article className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
+        <motion.article layout className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
             <div className="card text-dark mb-3">
                 <Link to={`/jobinfo/${item.id}`} onClick={toTop}>
                     <div className="card-header">
@@ -27,12 +28,14 @@ const Job = ({item}) => {
                                     <h5 className="card-title">{shrink(item.company, 19)}</h5>
                                     <p className="card-text area"><span className="iconify" data-icon="entypo:location"></span> {shrink(item.location, 11)}</p>
                                     <p className="card-text date"><small className="text-muted">Due: {item.due}</small></p>
+                                    {item.boost ? (<small style={{color: "#33cc33"}}>(Popular)</small>) : null} 
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">We are looking for:</h5>
+                        <h5 className="card-title">We're looking for:</h5>
                         <p className="card-text">{shrink(item.position, 56)}</p>
                     </div>
                 </Link>
@@ -65,7 +68,7 @@ const Job = ({item}) => {
                     </div>
                 </div>
             </div>
-        </article>   
+        </motion.article>   
         
     )
 }

@@ -1,7 +1,12 @@
 const DiffJobs = ({jobType, setJobType}) => {
+    const getValueType = (e) => {
+        setJobType(e.target.value)
+        window.scrollTo(0, 0);
+    }
+
     return (
         <>
-            <select className="form-select" aria-label="Default select job-type" value={jobType} onChange={e => setJobType(e.target.value)}>
+            <select className="form-select" aria-label="Default select job-type" value={jobType} onChange={e => getValueType(e)}>
                 <option value="">All Types</option>
                 <option value="agriculture">Agriculture, Food, and Natural Resources</option>
                 <option value="architecture">Architecture and Construction</option>

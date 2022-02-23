@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-.wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
   display: flex;
   align-items: center;
 }
@@ -188,6 +188,7 @@ body .home {
 }
 .navbar .collapse.navbar-collapse .menu-item .navbar-nav .nav-link.active:hover .iconify {
   transform: none;
+  color: white;
 }
 .navbar .collapse.navbar-collapse .menu-item .nav-item .tooltips {
   width: 20%;
@@ -481,6 +482,48 @@ footer .row .f-menu a:hover {
   position: fixed;
   padding: 20px;
 }
+.job-sidebar .tools {
+  justify-content: space-between;
+}
+.job-sidebar .tools .back-btn {
+  padding-bottom: 20px;
+  width: fit-content;
+}
+.job-sidebar .tools .back-btn:hover {
+  cursor: pointer;
+}
+.job-sidebar .tools .back-btn:hover .iconify {
+  color: #2b95ff;
+}
+.job-sidebar .tools .back-btn:active {
+  cursor: pointer;
+}
+.job-sidebar .tools .back-btn:active .iconify:nth-child(1) {
+  display: none;
+}
+.job-sidebar .tools .back-btn:active .iconify:nth-child(2) {
+  display: block;
+}
+.job-sidebar .tools .back-btn .iconify {
+  font-size: 35px;
+  color: #525252;
+}
+.job-sidebar .tools .back-btn .iconify:nth-child(2) {
+  display: none;
+  color: #2b95ff;
+}
+.job-sidebar .tools .more-tools {
+  padding-bottom: 20px;
+  width: fit-content;
+}
+.job-sidebar .tools .more-tools .iconify {
+  font-size: 21px;
+  color: #525252;
+}
+.job-sidebar .tools .more-tools .iconify:hover {
+  cursor: pointer;
+  color: #2b95ff;
+}
 .job-sidebar .info-logo {
   width: 100%;
   display: flex;
@@ -488,8 +531,12 @@ footer .row .f-menu a:hover {
   padding-bottom: 10px;
 }
 .job-sidebar .info-logo img {
-  width: 150px;
+  width: 100px;
   margin: 5px;
+  margin-top: 0;
+}
+.job-sidebar .info-position {
+  padding-left: 15px;
 }
 .job-sidebar .button-apply {
   width: 100%;

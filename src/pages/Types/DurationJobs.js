@@ -1,7 +1,11 @@
 const DurationJobs = ({jobTime, setJobTime}) => {
+    const getValueType = (e) => {
+        setJobTime(e.target.value)
+        window.scrollTo(0, 0);
+    }
     return (
         <>
-            <select className="form-select" aria-label="Default select job-time" value={jobTime} onChange={e => setJobTime(e.target.value)}>
+            <select className="form-select" aria-label="Default select job-time" value={jobTime} onChange={e => getValueType(e)}>
                 <option value="">Defualt Time</option>
                 <option value="full-time">Full-Time</option>
                 <option value="part-time">Part-Time</option>

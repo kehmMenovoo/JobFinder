@@ -18,6 +18,7 @@ import SearchJobs from "./pages/Search/SearchJobs";
 import JobInfo from "./pages/Info_Job/Job_info";
 
 function App() {
+  
   const [data, setData] = useState([]);
   const [allData, setAllData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,12 +29,11 @@ function App() {
   const [jobTime, setJobTime] = useState('');
   const [jobLevel, setJobLevel] = useState('');
   const [pageCount, setpageCount] = useState(0);
+  let [currentPage, setCurrentPage] = useState(1);
 
   const API_URL_All = 'http://localhost:3500/data';
-
-  let limit = 12;
-
-  document.getElementById("web_icon").href = "./images/JOBFINDER.png";
+  let limit =40;
+  // let pageAddress = `/page${currentPage}`;
 
   const location = useLocation();
   const { pathname } = location;
@@ -42,19 +42,29 @@ function App() {
   useEffect(() => {
     const fetchItems = async () => {
         try{
-          // page data
-          const response = await fetch(`${API_URL_All}?_page=1&_limit=${limit}`);
-          const listItems = await response.json();
-          if(!response.ok) throw Error('Cannot Find Data!');
-          setData(listItems);
-          const total = response.headers.get("x-total-count");
-          setpageCount(Math.ceil(total/limit));
-
           //All Data
           const res = await fetch(API_URL_All);
           const item = await res.json();
           if(!res.ok) throw Error('Cannot Find Data!');
           setAllData(item);
+
+          // page data
+          // if(splitLocation[1].includes("jobtype")) {
+          //   const response = await fetch(`${API_URL_All}?_page=${splitLocation[1].includes("jobtype") ? splitLocation[2].substring(4) : 1}&_limit=${limit}`);
+          //   const listItems = await response.json();
+          //   setCurrentPage(splitLocation[2].substring(4))
+          //   if(!response.ok) throw Error('Cannot Find Data!');
+          //   setData(listItems);
+          //   const total = response.headers.get("x-total-count");
+          //   setpageCount(Math.ceil(total/limit));
+          // }
+
+          const response = await fetch(`${API_URL_All}?_page=${currentPage}&_limit=${limit}`);
+          const listItems = await response.json();
+          if(!response.ok) throw Error('Cannot Find Data!');
+          setData(listItems);
+          const total = response.headers.get("x-total-count");
+          setpageCount(Math.ceil(total/limit));
 
           setFetchError(null);
         }
@@ -66,8 +76,7 @@ function App() {
         }
       }
     fetchItems();
-  }, [limit]);
-
+  }, [limit, currentPage]);
   const title=["Search", "Home", "Job Types", "Favorites", "Post", "Contact Us", "Job Information", "Register", 
     "Sign in", "Browse Freelancer", "Post Project", "About", "Privacy", "Term of Use", "Page Not Found"];
   const main = " | Khom Rok";
@@ -90,46 +99,91 @@ function App() {
     case "termofuse": titleName.innerHTML = title[13] + main; break;
     default: titleName.innerHTML = title[14] + main;
   }
+
   const history = useHistory();
 
-  const indicateData = async (currentPage) => {
-    const res = await fetch(`${API_URL_All}?_page=${currentPage}&_limit=${limit}`);
-    const data = await res.json();
-    return data;
+  const indicateData = async (currentPages) => {
+    try {
+      const res = await fetch(`${API_URL_All}?_page=${currentPages}&_limit=${limit}`);
+      const data = await res.json();
+      if(!res.ok) throw Error("Cannot Fetch Data!");
+      setFetchError(null);
+      return data;
+    }
+    catch(err) {
+      setFetchError(err.message);
+    }
+    finally {
+      setIsLoading(false);
+    }
   };
   const handleSearch = e => {
     e.preventDefault();
     if(valueSearch) setSearch(valueSearch);
     history.push('/search');
+    window.scrollTo(0, 0);
   }
   const handlePageClick = async (data) => {
-    let currentPage = data.selected + 1;
-    const jobCard = await indicateData(currentPage);
+    let currentP = data + 1;
+    setCurrentPage(currentP);
+    setIsLoading(true);
+    const jobCard = await indicateData(currentP);
     setData(jobCard);
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+    // history.push(`/jobtype/page${currentP}`);
   };
-  
+  allData.sort((a, b) => {
+    let key1 = a.id;
+    let key2 = b.id;
+    let boost1 = a.boost;
+    let boost2 = b.boost;
+
+    if((key1 < key2) && boost1) return 1;
+    if((key1 < key2) && boost2) return 1;
+    if(((key1 > key2) && boost1) || boost2) return -1;
+    return 0;
+  });
+
+  data.sort((a, b) => {
+    let key1 = a.id;
+    let key2 = b.id;
+    let boost1 = a.boost;
+    let boost2 = b.boost;
+
+    if((key1 < key2) && boost1) return 1;
+    if((key1 < key2) && boost2) return 1;
+    if(((key1 > key2) && boost1) || boost2) return -1;
+    return 0;
+  });
   let dataItem = allData.filter(i => (i.company).toLowerCase().includes(search.toLowerCase()) || (i.position).toLowerCase().includes(search.toLowerCase()));
-  let dataCustomize = (jobLevel || jobType || jobTime ? allData : data).filter(item => item.entryLevel.toLowerCase().includes(jobLevel.toLowerCase()) 
+  let totalData = allData.filter(item => item.boost===true ? item : null);
+  let dataCustomize = ((jobLevel || jobTime || jobType) ? allData : data).filter(item => item.entryLevel.toLowerCase().includes(jobLevel.toLowerCase()) 
   && item.typeJob.toLowerCase().includes(jobType.toLowerCase()) 
   && item.durationType.toLowerCase().includes(jobTime.toLowerCase()));
   return (
     <div className="App">
         {splitLocation[1] === "register" || splitLocation[1] === "sign_in" ? null : 
-          <Header valueSearch={valueSearch} setValueSearch={setValueSearch} splitLocation={splitLocation} handleSearch={handleSearch} />
+          <Header 
+            valueSearch={valueSearch} setValueSearch={setValueSearch} splitLocation={splitLocation} handleSearch={handleSearch} 
+            // pageAddress={pageAddress} 
+          />
         }
           <Switch>
             <Route exact path="/search">
               <SearchJobs data={dataItem} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} />
             </Route>
             <Route exact path="/">
-              <Home data={allData.filter(item => item.boost ? item : null)} isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} pageCount={Math.ceil(allData.filter(i => i.boost ? i:null).length/limit)} handlePageClick={handlePageClick}/>
+              <Home data={totalData} isLoading={isLoading} fetchError={fetchError} search={search} 
+                splitLocation={splitLocation} pageCount={Math.ceil(totalData.length/limit)} handlePageClick={handlePageClick}
+              />
             </Route>
-            <Route path="/jobtype">
+            {/* <Route path="/jobtype/:pageID"> */}
+            <Route path="/jobtype" >
               <TypeMenu data={dataCustomize} 
                 isLoading={isLoading} fetchError={fetchError} search={search} splitLocation={splitLocation} 
                 jobType={jobType} setJobType={setJobType} jobTime={jobTime} setJobTime={setJobTime} jobLevel={jobLevel} setJobLevel={setJobLevel}
                 pageCount={!(jobLevel || jobType || jobTime) ? pageCount : Math.ceil(dataCustomize.length/limit)} handlePageClick={handlePageClick}
+                currentPage={currentPage}
               />
             </Route>
             <Route path="/favorites">
@@ -144,7 +198,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
             <Route path="/jobinfo/:id">
-              <JobInfo isLoading={isLoading} fetchError={fetchError} allData={data} />
+              <JobInfo isLoading={isLoading} fetchError={fetchError} allData={allData} history={history} />
             </Route>
             <Route path="/browsefreelancer" component={BrowseFreelancer} />
             <Route path="/postproject" component={PostProject} />

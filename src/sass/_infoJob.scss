@@ -6,6 +6,56 @@
     border-radius: 10px;
     position: fixed;
     padding: 20px;
+    .tools {
+        @extend %flex-box;
+        justify-content: space-between;
+
+        .back-btn {
+            padding-bottom: 20px;
+            width: fit-content;
+            
+            &:hover {
+                cursor: pointer;
+                .iconify{
+                    color: $main-color;
+                }
+            }
+            &:active {
+                cursor: pointer;
+                .iconify:nth-child(1) {
+                    display: none;
+                }
+                .iconify:nth-child(2) {
+                    display: block;
+                }
+            }
+        
+            .iconify {
+                font-size: 35px;
+                color: rgb(82, 82, 82);
+            }
+            .iconify:nth-child(2) {
+                display: none;
+                color: $main-color;
+            }
+        }
+        .more-tools {
+            padding-bottom: 20px;
+            width: fit-content;
+
+            .iconify {
+                font-size: 21px;
+                color: rgb(82, 82, 82);
+
+                &:hover {
+                    cursor: pointer;
+                    color: $main-color;
+                }
+            }
+            
+        }
+    }
+
     .info-logo {
         width: 100%;
         display: flex;
@@ -13,9 +63,13 @@
         padding-bottom: 10px;
 
         img {
-            width: 150px;
+            width: 100px;
             margin: 5px;
+            margin-top: 0;
         }
+    }
+    .info-position {
+        padding-left: 15px;
     }
 
     .button-apply {
