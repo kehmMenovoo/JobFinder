@@ -305,23 +305,6 @@
       "subDepartment": "Marketing - Social Networking",
       "Report": "Assistant Business Development Manager",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
-    },
-    {
-      "boost": true,
-      "id": "bf46dd84-a9f1-4a68-8d8f-96d2092a8571",
-      "avatar": "/static/media/upload-logo.fd9348465c96610eee76.jpg",
-      "company": "Chipmong Group Co.Ltd",
-      "location": "Phnom Penh, Cambodia",
-      "postDate": "Feb 28, 2022",
-      "due": "Feb 09, 2022",
-      "position": "Cleaner/ Security in front of company",
-      "typeJob": "architecture",
-      "durationType": "part-time",
-      "entryLevel": "entry",
-      "department": "",
-      "subDepartment": "",
-      "Report": "",
-      "description": ""
     }
   ]
 }

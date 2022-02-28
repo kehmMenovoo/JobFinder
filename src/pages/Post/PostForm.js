@@ -24,10 +24,6 @@ const PostForm = () => {
     const imageChange = (e) => {
       if (e.target.files && e.target.files.length > 0) {
         setSelectedImage(e.target.files[0]);
-        // const fs = require('fs');
-        // fs.writeFile(`../images/${e.target.files[0].name}`, e.target.files[0], (err) => {
-        //     if(err) throw err;
-        // })
         setAvatar(UploadImage);
       }
     };
@@ -235,8 +231,6 @@ const PostForm = () => {
                 </div>
                 <p className="col-form-label">Job Description:</p>
                 <Editor
-                    className="post-des"
-                    required
                     init={{
                         menubar: false,
                         plugins: 'link image code video autoresize',
@@ -244,8 +238,8 @@ const PostForm = () => {
                         toolbar_location: 'bottom',
                         statusbar: false,
                         placeholder: "Type your message...",
+                        value: {description}
                     }}
-                    value={description}
                     onChange={handleEditorChange}
                 />
                 <br /><br />

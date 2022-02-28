@@ -6,6 +6,8 @@ const InfoContent = ({data}) => {
     
     const {history} = useContext(DataContext);
 
+    // document.querySelector('#info').innerHTML = "Hello world";
+
     function titleCase(str) {
         var splitStr = str.split(' ');
         for (var i = 0; i < splitStr.length; i++) {
@@ -126,8 +128,8 @@ const InfoContent = ({data}) => {
 
                     <div className="job-description">
                         <h4>Job Description</h4>
-                        <div className="detailed">
-                            <p>{data.description ? data.description:"No description!"}</p>
+                        <div className="detailed" id="info">
+                            {data.description ? data.description:"No description!"}
                         </div>
                     </div>
                 </div>

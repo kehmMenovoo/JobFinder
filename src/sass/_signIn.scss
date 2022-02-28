@@ -1,0 +1,157 @@
+.signIn {
+    @extend %flex-box;
+    justify-content: center;
+    min-height: 98vh;
+
+    .signCard {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0.5px 0.5px 3px;
+
+        .signInHeader {
+            @extend %flex-box;
+            justify-content: space-between;
+    
+            .logoSign {
+                img {
+                    width: 30px;
+                }
+            }
+            .signTitle {
+                color: $main-color;
+            }
+            .signBlank {
+                width: 30px;
+
+                .iconify {
+                    font-size: 25px;
+                    color: gray;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 20px 70px 50px 70px;
+
+            form {
+                input {
+                    width: 250px;
+                    padding-left: 5px;
+                    background-color: $hover-menu;
+                    border: none;
+                    outline: none;
+                }
+                .signEmail {
+                    @extend %flex-box;
+                    padding: 5px 8px;
+                    background-color: $hover-menu;
+                    border-radius: 10px;
+
+                    .iconify {
+                        font-size: 18px;
+                        color: gray;
+                    }
+                    
+                }
+
+                .log {
+                    @extend %flex-box;
+                    justify-content: right;
+                    gap: 8px;
+
+                    button {
+                        background-color: white;
+                        border: none;
+                        border-radius: 10px;
+                        @extend %flex-box;
+                        justify-content: center;
+                        padding: 4px 15px;
+
+                        &:nth-child(1) {
+                            border: 2px solid gray;
+                            color: gray;
+
+                            &:hover {
+                                background-color: $register;
+                                color: white;
+                                border: 2px solid $register;
+                            }
+                        }
+                        &:nth-child(2) {
+                            border: 2px solid $main-color;
+                            color: white;
+                            background-color: $main-color;
+
+                            &:hover {
+                                transform: scale(1.03);
+                            }
+                            &:active {
+                                transform: scale(1.03);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card-footer {
+            .otherWays {
+                justify-content: center;
+                margin-top: -30px;
+                height: 30px;
+                .other-sub {
+                    line-height: 2px;
+                    background-color: white;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 100%;
+
+                    p {
+                        text-align: center;
+                        font-size: 14px;
+                        color: gray;
+                    }
+               }
+            }
+            .socialMedia {
+                @extend %flex-box;
+                justify-content: center;
+                gap: 7px;
+
+                a {
+                    @extend %flex-box;
+                    img {
+                        width: 20px;
+                        border-radius: 50%;
+                    }
+                    &:nth-child(3) {
+                        @extend %flex-box;
+
+                        img {
+                            width: 28px;
+                        }
+                    }
+                }
+                
+            }
+            .container {
+                padding-bottom: 20px;
+                .know-us {
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 12px;
+
+                    a {
+                        color: $main-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

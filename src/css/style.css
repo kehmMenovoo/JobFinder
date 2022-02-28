@@ -2,7 +2,7 @@
 @import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-.term-of-use .term-sheet .title-term .tools, .job-post .image-tool, .job-post .form-input .preview, .wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.term-of-use .term-sheet .title-term .tools, .job-post .image-tool, .job-post .form-input .preview, .signIn .signCard .card-footer .socialMedia a:nth-child(3), .signIn .signCard .card-footer .socialMedia a, .signIn .signCard .card-footer .socialMedia, .signIn .signCard .card-body form .log button, .signIn .signCard .card-body form .log, .signIn .signCard .card-body form .signEmail, .signIn .signCard .signInHeader, .signIn, .wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
   display: flex;
   align-items: center;
 }
@@ -674,6 +674,127 @@ footer .row .f-menu a:hover {
 }
 .wrapper .col-md-6 .text-center .button .btn:active {
   transform: scale(0.98);
+}
+
+.signIn {
+  justify-content: center;
+  min-height: 98vh;
+}
+.signIn .signCard {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 3px;
+}
+.signIn .signCard .signInHeader {
+  justify-content: space-between;
+}
+.signIn .signCard .signInHeader .logoSign img {
+  width: 30px;
+}
+.signIn .signCard .signInHeader .signTitle {
+  color: #2b95ff;
+}
+.signIn .signCard .signInHeader .signBlank {
+  width: 30px;
+}
+.signIn .signCard .signInHeader .signBlank .iconify {
+  font-size: 25px;
+  color: gray;
+}
+.signIn .signCard .signInHeader .signBlank .iconify:hover {
+  cursor: pointer;
+}
+.signIn .signCard .card-body {
+  padding: 20px 70px 50px 70px;
+}
+.signIn .signCard .card-body form input {
+  width: 250px;
+  padding-left: 5px;
+  background-color: #e9e9e9;
+  border: none;
+  outline: none;
+}
+.signIn .signCard .card-body form .signEmail {
+  padding: 5px 8px;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+}
+.signIn .signCard .card-body form .signEmail .iconify {
+  font-size: 18px;
+  color: gray;
+}
+.signIn .signCard .card-body form .log {
+  justify-content: right;
+  gap: 8px;
+}
+.signIn .signCard .card-body form .log button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 4px 15px;
+}
+.signIn .signCard .card-body form .log button:nth-child(1) {
+  border: 2px solid gray;
+  color: gray;
+}
+.signIn .signCard .card-body form .log button:nth-child(1):hover {
+  background-color: #ff0055;
+  color: white;
+  border: 2px solid #ff0055;
+}
+.signIn .signCard .card-body form .log button:nth-child(2) {
+  border: 2px solid #2b95ff;
+  color: white;
+  background-color: #2b95ff;
+}
+.signIn .signCard .card-body form .log button:nth-child(2):hover {
+  transform: scale(1.03);
+}
+.signIn .signCard .card-body form .log button:nth-child(2):active {
+  transform: scale(1.03);
+}
+.signIn .signCard .card-footer .otherWays {
+  justify-content: center;
+  margin-top: -30px;
+  height: 30px;
+}
+.signIn .signCard .card-footer .otherWays .other-sub {
+  line-height: 2px;
+  background-color: white;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+.signIn .signCard .card-footer .otherWays .other-sub p {
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+.signIn .signCard .card-footer .socialMedia {
+  justify-content: center;
+  gap: 7px;
+}
+.signIn .signCard .card-footer .socialMedia a img {
+  width: 20px;
+  border-radius: 50%;
+}
+.signIn .signCard .card-footer .socialMedia a:nth-child(3) img {
+  width: 28px;
+}
+.signIn .signCard .card-footer .container {
+  padding-bottom: 20px;
+}
+.signIn .signCard .card-footer .container .know-us {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+}
+.signIn .signCard .card-footer .container .know-us a {
+  color: #2b95ff;
+  text-decoration: none;
 }
 
 .not-found {
