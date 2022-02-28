@@ -1,9 +1,12 @@
+import DataContext from "../../../contexts/DataContext";
 import Job from "./Job";
 import sadRobot from "../../../images/robot-sad.png";
 import ReactPaginate from "react-paginate";
 import { motion, AnimatePresence } from "framer-motion";
+import { useContext } from "react";
 
-const JobItems = ({data, fetchError, isLoading, search, splitLocation, pageCount, handlePageClick, currentPage}) => {
+const JobItems = ({data}) => {
+    const {fetchError, isLoading, search, splitLocation, pageCount, handlePageClick, currentPage, limit} = useContext(DataContext);
 
     return (
         <>
@@ -41,7 +44,7 @@ const JobItems = ({data, fetchError, isLoading, search, splitLocation, pageCount
                                 {!isLoading && data.length === 0 ? (
                                     <div style={{textAlign: "center", color: "gray", marginTop: "100px", marginBottom: "150px", minHeight: "40vh"}}>
                                         <img src={sadRobot} className="mb-3" alt="Not Found" width="150px"/>
-                                        <h3>No post in this moment!</h3>
+                                        <h3>No Jobs Found!</h3>
                                     </div>) 
                                 : ""}
                             </AnimatePresence>
@@ -51,7 +54,7 @@ const JobItems = ({data, fetchError, isLoading, search, splitLocation, pageCount
                 </div>
             </div>
            
-           {pageCount > 1 && splitLocation[1] && data.length <= 40 ? 
+           {pageCount > 1 && splitLocation[1] && data.length <= limit ? 
                 <ReactPaginate
                     previousLabel={<><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></>}
                     nextLabel={<><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></>}

@@ -1,12 +1,15 @@
+import DataContext from "../../contexts/DataContext";
 import DiffJobs from "./DiffJobs";
 import DurationJobs from "./DurationJobs";
 import Seniority from "./Seniority";
 import Contents from "../Home/Body/Contents";
 import FooterMenu from "../Home/Footer/FooterMenu";
 import Copyright from "../Home/Footer/Copyright";
+import { useContext } from "react";
 
-const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel , pageCount, handlePageClick, currentPage }) => {
-    console.log(splitLocation[1]);
+const TypeMenu = () => {
+    const {dataCustomize, isLoading, fetchError, jobType, setJobType, jobTime, setJobTime, jobLevel, setJobLevel, limit, pageCount } = useContext(DataContext);
+
     return (
         <div className="type-page">
             {isLoading && 
@@ -48,14 +51,8 @@ const TypeMenu = ({data, isLoading, fetchError, search, splitLocation, jobType, 
                     </div>
                     <main style={{marginTop: "50px"}}>
                         <Contents
-                            data={data}
-                            isLoading={isLoading}
-                            fetchError={fetchError}
-                            search={search}
-                            splitLocation={splitLocation}
-                            pageCount={pageCount}
-                            handlePageClick={handlePageClick}
-                            currentPage={currentPage}
+                            data={dataCustomize}
+                            pageCount={!(jobLevel || jobType || jobTime) ? pageCount : Math.ceil(dataCustomize.length/limit)}
                         />
                     </main>
                     <FooterMenu />

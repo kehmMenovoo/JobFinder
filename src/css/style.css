@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-.wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+.term-of-use .term-sheet .title-term .tools, .job-post .image-tool, .job-post .form-input .preview, .wrapper .col-md-6 .text-center .button, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
   display: flex;
   align-items: center;
 }
@@ -327,7 +328,7 @@ main .content-container {
   flex-direction: column;
 }
 main .content-container .count-jobs {
-  font-size: 18px;
+  font-size: 16px;
 }
 main .container {
   margin: 10px 20px;
@@ -848,11 +849,165 @@ footer .row .f-menu a:hover {
     display: none;
   }
 }
+.job-post {
+  margin-top: 60px;
+  padding: 30px 70px 80px 70px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.job-post input:focus {
+  box-shadow: none;
+  background-color: white;
+}
+.job-post input[type=file]:hover {
+  cursor: pointer;
+}
+.job-post input[type=date]:hover {
+  cursor: pointer;
+}
+.job-post select:focus {
+  box-shadow: none;
+  background-color: white;
+}
+.job-post select:hover {
+  cursor: pointer;
+}
+.job-post .form-group-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.job-post .form-group-heading:hover {
+  cursor: pointer;
+}
+.job-post .form-group-content {
+  width: 100%;
+}
+.job-post .form-group-content input {
+  margin-left: 20px;
+  width: 90%;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+.job-post .box {
+  border-radius: 30px;
+  border-color: #00b9f3;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e5e5e5;
+}
+.job-post .box-1, .job-post .box-2 {
+  border-radius: 10px;
+}
+.job-post .box-2 {
+  padding: 5px;
+}
+.job-post .form-control, .job-post .form-select {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.job-post .form-group .selectForm {
+  width: 160px;
+  height: 40px;
+}
+.job-post .col-form-label {
+  font-weight: bold;
+}
+.job-post .form-input {
+  padding: 0;
+  width: 150px;
+  height: fit-content;
+  border: 2px dashed #cccccc;
+  margin-bottom: 20px;
+}
+.job-post .form-input .upload-msg {
+  text-align: center;
+  color: #949494;
+}
+.job-post .form-input .preview {
+  flex-direction: column;
+  justify-content: center;
+}
+.job-post .form-input input {
+  display: none;
+}
+.job-post .form-input label {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #00b9f3;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.job-post .form-input img {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.job-post .publish-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.job-post .pub-btn {
+  background-color: #00b9f3;
+  margin-top: 2px;
+  border-radius: 10px;
+  color: #fff;
+  width: 100px;
+  padding: 8px 15px;
+  border: none;
+}
+.job-post .pub-btn:hover {
+  background-color: #ff0055;
+}
+.job-post .image-tool {
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
 .term-of-use .term-sheet {
   background-color: white;
   padding: 15px;
   margin: 70px 200px;
   border-radius: 10px;
+}
+.term-of-use .term-sheet .title-term .tools {
+  justify-content: space-between;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn {
+  width: fit-content;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn:hover {
+  cursor: pointer;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn:hover .iconify {
+  color: #2b95ff;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn:active {
+  cursor: pointer;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn:active .iconify:nth-child(1) {
+  display: none;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn:active .iconify:nth-child(2) {
+  display: block;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn .iconify {
+  font-size: 35px;
+  color: #525252;
+}
+.term-of-use .term-sheet .title-term .tools .back-btn .iconify:nth-child(2) {
+  display: none;
+  color: #2b95ff;
 }
 .term-of-use .term-sheet .title-term h3 {
   text-align: center;

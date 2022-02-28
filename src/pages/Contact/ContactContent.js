@@ -1,4 +1,10 @@
 import { Editor } from '@tinymce/tinymce-react';
+// import DataContext from "../../contexts/DataContext";
+// import { useContext } from "react";
+// import { Editor } from "react-draft-wysiwyg";
+// import EditorState from "draft-js/lib/EditorState";
+// import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+
 
 const ContactContent = () => {
 
@@ -49,6 +55,7 @@ const ContactContent = () => {
                                                         <input type="email" className="form-control" placeholder="Email" required /><br />
                                                         <Editor
                                                             className="form-control-t"
+                                                            
                                                             init={{
                                                                 menubar: false,
                                                                 plugins: 'link image code',
@@ -60,6 +67,17 @@ const ContactContent = () => {
                                                             }}
                                                             onChange={handleEditorChange}
                                                         />
+            
+                                                        {/* <Editor
+                                                            className="form-control-t"
+                                                            toolbarClassName="toolbarClassName"
+                                                            wrapperClassName="wrapperClassName"
+                                                            editorClassName="editorClassName"
+                                                            placeholder="Write something..."
+                                                        /> */}
+
+                                                        
+
                                                     </div>
                                                     <div className="button mt-4 text-left"> 
                                                         <button type="submit" className="btn btn-dark">Send</button> 
@@ -77,5 +95,6 @@ const ContactContent = () => {
         </>
     )
 }
+
 
 export default ContactContent

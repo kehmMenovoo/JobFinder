@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import DataContext from "../../../contexts/DataContext";
 import JobItems from "./JobItems";
 
-const Contents = ({data, fetchError, isLoading, search, splitLocation, pageCount, handlePageClick, currentPage}) => {
+const Contents = ({data}) => {
+    const {fetchError, isLoading} = useContext(DataContext);
 
     return (
         <>
@@ -18,9 +21,7 @@ const Contents = ({data, fetchError, isLoading, search, splitLocation, pageCount
                 {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
                 {!fetchError && !isLoading && 
                     <JobItems 
-                        data={data} isLoading={isLoading} search={search} splitLocation={splitLocation} 
-                        pageCount={pageCount} handlePageClick={handlePageClick} fetchError={fetchError}
-                        currentPage={currentPage}
+                        data={data}
                     />
                 }
             </main>

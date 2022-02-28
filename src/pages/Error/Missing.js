@@ -1,11 +1,11 @@
-import SadRobot from "../../images/robot-sad.png";
+import BrokenRobot from "../../images/404.png";
 
 const Missing = () => {
     return (
         <div className="not-found">
             <div className="error-item">
                 <div>
-                    <img src={SadRobot} alt="not found" width="250px" />
+                    <img src={BrokenRobot} alt="not found" width="250px" />
                 </div>
                 <div className="error-message">
                     <h3>Page Not Found!</h3>

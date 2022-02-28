@@ -13,6 +13,7 @@ const Seniority = ({jobLevel, setJobLevel}) => {
                 <option value="senior-executive">Senior Executive</option>
                 <option value="manager">Manager/Supervisor</option>
                 <option value="senior-manager">Senior Manager/Supervisor</option>
+                <option value="othersLevel">Others</option>
             </select>
         </>
     )

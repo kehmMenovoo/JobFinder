@@ -1,6 +1,10 @@
-const PostJob = ({fetchError, isLoading}) => {
+import DataContext from "../../contexts/DataContext";
+import PostForm from "./PostForm";
+import { useContext } from "react"
+
+const PostJob = () => {
+    const {fetchError, isLoading} = useContext(DataContext);
     return (
-        
         <div>
             {isLoading && 
                 <div style={{width: "100%", height: "100%", position: "fixed", zIndex: "9999999", background: "white"}}>
@@ -18,7 +22,7 @@ const PostJob = ({fetchError, isLoading}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    <h1 style={{textAlign: "center", marginTop: "200px"}}>Post A Job or Something...</h1>
+                    <PostForm />
                 </>
             }
         </div>

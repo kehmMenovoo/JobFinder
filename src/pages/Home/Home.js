@@ -1,9 +1,13 @@
 import Slider from "./Header/Slider";
 import Contents from "./Body/Contents";
+import DataContext from "../../contexts/DataContext";
 import FooterMenu from "./Footer/FooterMenu";
 import Copyright from "./Footer/Copyright";
+import { useContext } from "react";
 
-const Home = ({data, isLoading, fetchError, search, splitLocation, pageCount, handlePageClick}) => {
+const Home = () => {
+
+    const {totalData, isLoading, fetchError, limit} = useContext(DataContext);
     
     return (
         <div className="home">
@@ -26,13 +30,8 @@ const Home = ({data, isLoading, fetchError, search, splitLocation, pageCount, ha
                     <Slider />
                     <div style={{backgroundColor: "#e0e0e0"}}>
                         <Contents 
-                            data={data} 
-                            fetchError={fetchError}
-                            isLoading={isLoading}
-                            search={search}
-                            splitLocation={splitLocation}
-                            pageCount={pageCount}
-                            handlePageClick={handlePageClick}
+                            data={totalData} 
+                            pageCount={Math.ceil(totalData.length/limit)}
                         />
                         <FooterMenu />
                         <Copyright />

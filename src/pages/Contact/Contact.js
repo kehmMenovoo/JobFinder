@@ -1,6 +1,11 @@
-import ContactContent from "./ContactContent"
+import { useContext } from "react"
+import ContactContent from "./ContactContent";
+import Copyright from "../Home/Footer/Copyright";
+import DataContext from "../../contexts/DataContext";
 
-const Contact = ({fetchError, isLoading}) => {
+const Contact = () => {
+
+    const {fetchError, isLoading} = useContext(DataContext);
     return (
         <div>
             {isLoading && 
@@ -20,6 +25,7 @@ const Contact = ({fetchError, isLoading}) => {
             {!fetchError && !isLoading && 
                 <>
                     <ContactContent />
+                    <Copyright />
                 </>
             }
         </div>

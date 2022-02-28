@@ -1,11 +1,16 @@
+import DataContext from "../../../contexts/DataContext";
 import JOBFINDER from '../../../images/JOBFINDER.png';
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
-const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch, 
-    // pageAddress
-    }) => {
+const Header = () => {
+
+    const {valueSearch, setValueSearch, splitLocation, handleSearch} = useContext(DataContext);
 
     const navLink = "nav-link";
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
     
     return (
         <>
@@ -41,7 +46,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                             <ul className="navbar-nav" id='navbar-menu'>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} to="/">
+                                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} to="/" onClick={scrollToTop}>
                                             <span class="iconify" data-icon="ant-design:home-outlined"></span>
                                         </Link>
                                     </div>
@@ -51,7 +56,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`}>
+                                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`} onClick={scrollToTop}>
                                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
                                         </Link>
                                     </div>
@@ -61,7 +66,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
+                                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post" onClick={scrollToTop}>
                                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
                                         </Link>
                                     </div>
@@ -71,7 +76,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites">
+                                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites" onClick={scrollToTop}>
                                             <span className="iconify" data-icon="ant-design:heart-outlined"></span>
                                         </Link>
                                     </div>
@@ -81,7 +86,7 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                                 </li>
                                 <li className="nav-item">
                                     <div>
-                                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact">
+                                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact" onClick={scrollToTop}>
                                             <span className="iconify" data-icon="bx:bx-phone"></span>
                                         </Link>
                                     </div>
@@ -93,10 +98,10 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
                         </div>
 
                         <div className="sign-in">
-                            <Link to="/register">
+                            <Link to="/register" onClick={scrollToTop}>
                                 <button id="register">Regiter</button>
                             </Link>
-                            <Link to="/sign_in">
+                            <Link to="/sign_in" onClick={scrollToTop}>
                                 <button id="sign-in">Sign in</button>
                             </Link>
                         </div>
@@ -105,19 +110,19 @@ const Header = ({valueSearch, setValueSearch, splitLocation, handleSearch,
 
                 <div className="mb-menu">
                     <nav className="nav justify-content-center" id='navbar-menu'>
-                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} aria-current="page" to="/" >
+                        <Link className={splitLocation[1] === "" ? `${navLink} active` : navLink} aria-current="page" to="/" onClick={scrollToTop} >
                             <span class="iconify" data-icon="ant-design:home-outlined"></span>
                         </Link>
-                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`} >
+                        <Link className={splitLocation[1] === "jobtype" ? `${navLink} active` : navLink} to={`/jobtype`} onClick={scrollToTop} >
                             <span className="iconify" data-icon="bx:bx-briefcase"></span>
                         </Link>
-                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post">
+                        <Link className={splitLocation[1] === "post" ? `${navLink} active` : navLink} to="/post" onClick={scrollToTop}>
                             <span className="iconify" data-icon="akar-icons:cloud-upload"></span>
                         </Link>
-                        <Link className="nav-link" to="/favorites">
+                        <Link className={splitLocation[1] === "favorites" ? `${navLink} active` : navLink} to="/favorites" onClick={scrollToTop}>
                             <span className="iconify" data-icon="ant-design:heart-outlined"></span>
                         </Link>
-                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact">
+                        <Link className={splitLocation[1] === "contact" ? `${navLink} active` : navLink} to="/contact" onClick={scrollToTop}>
                             <span className="iconify" data-icon="bx:bx-phone"></span>
                         </Link>
                     </nav>

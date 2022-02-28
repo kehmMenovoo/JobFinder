@@ -1,12 +1,29 @@
 import Copyright from "../Home/Footer/Copyright";
 import FooterMenu from "../Home/Footer/FooterMenu";
+import DataContext from "../../contexts/DataContext";
+import { useContext } from "react";
 
 const About = () => {
+    const {history} = useContext(DataContext);
+
+    const goBack = () => {
+        history.goBack();
+    }
+
     return (
         <div className="term-of-use">
             <div className="term-sheet">
                 <div className="title-term">
-                    <h3>About</h3>
+                    <div className="tools">
+                        <div className="back-btn" onClick={goBack}>
+                            <span className="iconify" data-icon="bi:arrow-left-short"></span>
+                            <span className="iconify" data-icon="bi:arrow-left-circle-fill"></span>
+                        </div>
+                        <div>
+                            <h3>About Us</h3>
+                        </div>
+                        <div></div>
+                    </div>
                     <hr />
                 </div>
                 <div className="text-content-sheet">

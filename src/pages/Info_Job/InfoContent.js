@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import DataContext from "../../contexts/DataContext";
 
-const InfoContent = ({data, history}) => {
+const InfoContent = ({data}) => {
+    
+    const {history} = useContext(DataContext);
+
     function titleCase(str) {
         var splitStr = str.split(' ');
         for (var i = 0; i < splitStr.length; i++) {
@@ -122,7 +127,7 @@ const InfoContent = ({data, history}) => {
                     <div className="job-description">
                         <h4>Job Description</h4>
                         <div className="detailed">
-                            <p>{data.description}</p>
+                            <p>{data.description ? data.description:"No description!"}</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import DataContext from "../../contexts/DataContext";
 
-const Favorite = ({fetchError, isLoading}) => {
+const Favorite = () => {
+    const {fetchError, isLoading} = useContext(DataContext);
+    
     return (
         <div>
             {isLoading && 

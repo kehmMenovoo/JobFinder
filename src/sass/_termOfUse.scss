@@ -9,10 +9,45 @@
         border-radius: 10px;
 
        .title-term {
+            .tools {
+                @extend %flex-box;
+                justify-content: space-between;
+        
+                .back-btn {
+                    width: fit-content;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        .iconify{
+                            color: $main-color;
+                        }
+                    }
+                    &:active {
+                        cursor: pointer;
+                        .iconify:nth-child(1) {
+                            display: none;
+                        }
+                        .iconify:nth-child(2) {
+                            display: block;
+                        }
+                    }
+                
+                    .iconify {
+                        font-size: 35px;
+                        color: rgb(82, 82, 82);
+                    }
+                    .iconify:nth-child(2) {
+                        display: none;
+                        color: $main-color;
+                    }
+                }
+            }
+    
             h3 {
                 text-align: center;
                 font-weight: 800;
             }
+            
        }
        .text-content-sheet {
            padding: 10px 40px;

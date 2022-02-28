@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import InfoContent from './InfoContent';
+import DataContext from '../../contexts/DataContext';
 
-const Job_info = ({isLoading, fetchError, allData, history}) => {
+const Job_info = () => {
+
+    const {isLoading, fetchError, allData} = useContext(DataContext);
     const {id} = useParams();
     const data = allData.find(post => (post.id).toString() === id);
     document.getElementById("web_icon").href = "../../images/JOBFINDER.png";
@@ -24,7 +28,7 @@ const Job_info = ({isLoading, fetchError, allData, history}) => {
             {fetchError && <h2 style={{color: "red", marginTop: '100px', marginBottom: "100px", textAlign: "center"}}>{`Error: ${fetchError}`}</h2>}
             {!fetchError && !isLoading && 
                 <>
-                    <InfoContent data={data} history={history} />
+                    <InfoContent data={data} />
                 </>
             }
         </div>

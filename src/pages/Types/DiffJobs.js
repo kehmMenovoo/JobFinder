@@ -19,6 +19,7 @@ const DiffJobs = ({jobType, setJobType}) => {
                 <option value="law">Law, Public Safety, Corrections, and Security</option>
                 <option value="marketing">Marketing</option>
                 <option value="science">Science, Technology, Engineering, and Math</option>
+                <option value="otherType">Others</option>
             </select>
         </>
     )
