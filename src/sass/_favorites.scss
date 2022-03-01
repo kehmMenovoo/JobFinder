@@ -1,0 +1,158 @@
+.favorites {
+    padding: 70px 10px;
+
+    .sidebar {
+
+        .card {
+            background-color: white;
+            position: fixed;
+            width: 280px;
+            min-height: 88vh;
+    
+            .card-header {
+                background-color: white;
+                padding: 10px 5px 5px 20px;
+    
+                h3 {
+                    font-weight: bold;
+                }
+            }
+    
+            .card-body {
+                form {
+                    margin-top: -10px;
+    
+                    .tools {
+                        @extend %flex-box;
+    
+                        .filter {
+                            border: none;
+                            border-radius: 5px;
+                            padding: 2px 5px 2px 0;
+                            outline: none;
+        
+                            &:focus {
+                                background-color: rgb(228, 228, 228);
+                            }
+                            &:hover {
+                                cursor: pointer;
+                            }
+                            option {
+                                background-color: white;
+                            }
+                        }
+                        .remove {
+                            margin-left: 5px;
+                            padding-left: 10px;
+                            padding-bottom: 5px;
+                            border-left: 1px solid gray;
+    
+                            .iconify {
+                                font-size: 22px;
+                                color: gray;
+    
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .find-fav {
+                        border: 1px solid gray;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        @extend %flex-box;
+    
+                        .find {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            .iconify {
+                               font-size: 18px;
+                               color: gray;
+                            }
+                        }
+    
+                        input {
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            padding: 2px 0;
+                            border-radius: 10px;
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+
+    .fav-items-content {
+        margin-left: 300px;
+        margin-right: 20px;
+        
+        .row {
+            .card {
+                border-radius: 10px;
+                background-color: white;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+                max-width: 18rem;
+                .card-header {
+                    background-color: white;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    .img-fluid {
+                        margin-top: 20px;
+                    }
+                    .card-title {
+                        font-size: 15px;
+                    }
+                    .card-text.area {
+                        color: gray;
+                        margin: 0;
+                        font-size: 13px;
+                        font-family: 'Source Sans Pro', sans-serif;
+                    }
+                    .card-text.date {
+                        font-family: 'Source Sans Pro', sans-serif;
+                        color: darkgray;
+                        margin: 0;
+                        font-size: 13px;
+                    }
+                }
+                .card-body {
+                    height: 120px;
+
+                    .card-title {
+                        font-size: 15px;
+                    }
+                    .card-text {
+                        font-family: 'Glacial Indifference', sans-serif;
+                        font-size: 14px;
+                        color: rgb(80, 80, 80);
+                    }
+                }
+                .card-footer {
+                    .content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+                        .apply {
+                            @extend %btn-highlight;
+                        }
+                        .add-fav {
+                            @extend %btn-highlight;
+                        }
+                        .share-job {
+                            @extend %btn-highlight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

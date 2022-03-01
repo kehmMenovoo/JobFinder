@@ -21,6 +21,7 @@ export const DataProvider = ({children}) => {
     const [pageCount, setpageCount] = useState(0);
     let [currentPage, setCurrentPage] = useState(1);
     const [selectedImage, setSelectedImage] = useState();
+    const [favoriteData, setFavoriteData] = useState([]);
 
     const [avatar, setAvatar] = useState(UploadImage);
     const [company, setCompany] = useState("");
@@ -49,6 +50,7 @@ export const DataProvider = ({children}) => {
         setAllData(info);
         setFetchError(error);
         setIsLoading(loading);
+        
     }, [info, error, loading]);
 
     useEffect(() => {
@@ -61,6 +63,12 @@ export const DataProvider = ({children}) => {
                 setData(listItems);
                 const total = response.headers.get("x-total-count");
                 setpageCount(Math.ceil(total/limit));
+
+                // Favorite Data
+                const res = await fetch('http://localhost:3500/favorites')
+                const temp = await res.json();
+                if(!res.ok) throw Error("Can't Find Data!");
+                setFavoriteData(temp);
 
                 setFetchError(null);
             }
@@ -176,7 +184,7 @@ export const DataProvider = ({children}) => {
             due, setDue, position, setPosition, typeJob, setTypeJob,
             durationType, setDurationType, entryLevel, setEntrylevel, department, setDepartment,
             subDepartment, setSubDepartment, report, setReport, description, setDescription, 
-            handlePostJob, limit
+            handlePostJob, limit, favoriteData, setFavoriteData
         }}>
             {children}
         </DataContext.Provider>

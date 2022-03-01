@@ -231,10 +231,19 @@ const PostForm = () => {
                 </div>
                 <p className="col-form-label">Job Description:</p>
                 <Editor
+                    apiKey="7cem6u4zosjen9lg7ftfsxe5j3r8pa4xiium6ury9uvjbvmw"
                     init={{
                         menubar: false,
-                        plugins: 'link image code video autoresize',
-                        toolbar: 'undo redo | bold italic underline link strikethrough blockquote align backcolor | removeformat image video help autoresize',
+                        plugins: [
+                            'advlist autolink lists textcolor link image video autoresize', 
+                            'charmap print preview anchor help',
+                            'searchreplace visualblocks code',
+                            'insertdatetime media table paste wordcount'
+                        ],
+                        toolbar: 'undo redo formatselect bold italic underline \
+                            forecolor backcolor | align bullist numlist outdent indent \
+                            | link strikethrough blockquote | removeformat help fullscreen | \
+                            removeformat image video help autoresize',
                         toolbar_location: 'bottom',
                         statusbar: false,
                         placeholder: "Type your message...",

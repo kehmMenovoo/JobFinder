@@ -306,5 +306,43 @@
       "Report": "Assistant Business Development Manager",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
     }
+  ],
+
+  
+  "favorites": [
+    {
+      "boost": true,
+      "id": 12,
+      "avatar": "../../../images/Bred.jpg",
+      "company": "BRED Bank (Cambodia) Plc.,",
+      "location": "Phnom Penh, Cambodia",
+      "postDate": "7 Jan, 2022",
+      "due": "24 Jun, 2022",
+      "position": "Senior Relationship Manager, International Corporate / Senior Credit Analyst-SME & Retail / Credit Analyst-SME & Retail",
+      "typeJob": "business",
+      "durationType": "volunteer",
+      "entryLevel": "entry",
+      "department": "Marketing",
+      "subDepartment": "Marketing - Social Networking",
+      "Report": "Assistant Business Development Manager",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
+    },
+    {
+      "boost": true,
+      "id": 13,
+      "avatar": "../../../images/CircleReno.jpg",
+      "company": "Circle Renovation (Cambodia) Co., Ltd.",
+      "location": "Phnom Penh, Cambodia",
+      "postDate": "9 Jan, 2022",
+      "due": "4 May, 2022",
+      "position": "Interior Designer / Architect, Site Engineer, Site Architect, ...",
+      "typeJob": "architecture",
+      "durationType": "full-time",
+      "entryLevel": "entry",
+      "department": "Marketing",
+      "subDepartment": "Marketing - Social Networking",
+      "Report": "Assistant Business Development Manager",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
+    }
   ]
 }

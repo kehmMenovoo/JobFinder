@@ -55,11 +55,16 @@ const ContactContent = () => {
                                                         <input type="email" className="form-control" placeholder="Email" required /><br />
                                                         <Editor
                                                             className="form-control-t"
-                                                            
+                                                            apiKey="7cem6u4zosjen9lg7ftfsxe5j3r8pa4xiium6ury9uvjbvmw"
                                                             init={{
                                                                 menubar: false,
-                                                                plugins: 'link image code',
-                                                                toolbar: 'undo redo | bold italic underline link strikethrough blockquote align backcolor | removeformat help fullscreen ',
+                                                                plugins: [
+                                                                    'advlist autolink lists textcolor link image autoresize', 
+                                                                    'charmap print preview anchor help',
+                                                                    'searchreplace visualblocks code',
+                                                                    'insertdatetime media table paste wordcount'
+                                                                ],
+                                                                toolbar: 'undo redo bold italic underline | forecolor backcolor link strikethrough blockquote | align bullist numlist outdent indent | removeformat help autoresize',
                                                                 toolbar_location: 'bottom',
                                                                 statusbar: false,
                                                                 placeholder: "Type your message...",
