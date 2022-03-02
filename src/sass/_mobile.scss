@@ -17,6 +17,25 @@
         // }
         .mb-menu {
             display: block;
+            
+            .nav-link {
+                border-radius: 10px;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .iconify {
+                    color: $dark-gray;
+                }
+
+                &.active {
+                    background-color: $main-color;
+                    .iconify {
+                        color: white;
+                    }
+                }
+            }
         }
     }
     .type-page {
@@ -32,6 +51,16 @@
     }
     main {
         margin-top: 60px;
+
+        .content-container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    .postForm {
+        padding-top: 10px;
+
+       
     }
 }
 @media only screen and (max-width: 768px) {
@@ -49,9 +78,66 @@
             display: none;
         }
     }
+    main {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        .content-container {
+            padding-left: 50px;
+            padding-right: 50px;
+            .container-fluid {
+                .row {
+                    .card {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .card-header {
+                            .img-fluid {
+                                width: 60px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .postForm {
+        font-size: 12px;
+
+        .job-post {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            #publishTop {
+                display: none;
+            }
+            input {
+                font-size: 12px;
+                height: 30px;
+            }
+            select {
+                font-size: 12px;
+            }
+            .selectForm {
+                height: 10px;
+            }
+        }
+    }
     
 }
+@media only screen and (max-width: 575px) {
+    main {
+       .content-container {
+           padding-left: 100px;
+           padding-right: 100px;
+       }
+    }
+}
 @media only screen and (max-width: 512px) {
+
     .navbar .collapse {
         .search-item {
             .logo .navbar-brand img {
@@ -100,6 +186,42 @@
         }
         .title-categories {
             display: none;
+        }
+    }
+    main {
+        margin-top: 80px;
+
+        .content-container {
+            padding-left: 70px;
+            padding-right: 70px;
+            .row {
+                .card {
+                    .card-header {
+                        .card-title {
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+                        .card-text.area {
+                            font-size: 9px;
+                        }
+                        .card-text.date {
+                            font-size: 9px;
+                        }
+                        .pop {
+                            font-size: 10px;
+                        }
+                     }
+                     .card-body {
+                         .card-title {
+                             font-size: 11px;
+                             font-weight: 600;
+                         }
+                         .card-text {
+                             font-size: 10px;
+                         }
+                     }
+                }
+            }
         }
     }
 }
@@ -155,6 +277,37 @@
 
     main {
         margin-top: 70px;
+
+        .container-fluid {
+            .row {
+                .card {
+                    .card-header {
+                       .card-title {
+                           font-size: 12px;
+                           font-weight: 700;
+                       }
+                       .card-text.area {
+                           font-size: 9px;
+                       }
+                       .card-text.date {
+                           font-size: 9px;
+                       }
+                       .pop {
+                           font-size: 10px;
+                       }
+                    }
+                    .card-body {
+                        .card-title {
+                            font-size: 11px;
+                            font-weight: 600;
+                        }
+                        .card-text {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .type-page {

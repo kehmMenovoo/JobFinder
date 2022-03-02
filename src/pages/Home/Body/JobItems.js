@@ -12,7 +12,7 @@ const JobItems = ({data}) => {
     return (
         <>
             <div className="content-container">
-                <div className="container mt-4 d-flex align-items-center gap-3" id="job-items">
+                <div className="container-fluid mt-4 d-flex align-items-center gap-3" id="job-items">
                     <div className="count-jobs text-secondary" id="jobcount-res">
                         {search && splitLocation[1] === 'search' ? 
                             `Search for: ${search} | Found: ${data.length} ${data.length !== 1 ? "results" : "result"}`
@@ -21,7 +21,7 @@ const JobItems = ({data}) => {
                         }
                     </div>
                 </div>
-                <div className="container">
+                <div className="container-fluid">
                     <motion.div animate={{opacity: 1}} initial={{opacity: 0}} exit={{opacity: 0}} layout className="row">
                         <PageLoading />
                         {!fetchError && !isLoading && 

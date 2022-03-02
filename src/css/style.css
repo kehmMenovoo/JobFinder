@@ -2,15 +2,15 @@
 @import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-.term-of-use .term-sheet .title-term .tools, .job-post .image-tool, .job-post .form-input .preview, .signIn .signCard .card-footer .socialMedia a:nth-child(3), .signIn .signCard .card-footer .socialMedia a, .signIn .signCard .card-footer .socialMedia, .signIn .signCard .card-body form .log button, .signIn .signCard .card-body form .log, .signIn .signCard .card-body form .signEmail, .signIn .signCard .signInHeader, .signIn, .wrapper .col-md-6 .text-center .button, .favorites .sidebar .card .card-body form .find-fav, .favorites .sidebar .card .card-body form .tools, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .favorites .fav-items-content .row .card .card-footer .content .share-job button, .favorites .fav-items-content .row .card .card-footer .content .add-fav button, .favorites .fav-items-content .row .card .card-footer .content .apply button, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.term-of-use .term-sheet .title-term .tools, .job-post .image-tool, .job-post .form-input .preview, .signIn .signCard .card-footer .socialMedia a:nth-child(3), .signIn .signCard .card-footer .socialMedia a, .signIn .signCard .card-footer .socialMedia, .signIn .signCard .card-body form .log button, .signIn .signCard .card-body form .log, .signIn .signCard .card-body form .signEmail, .signIn .signCard .signInHeader, .signIn, .wrapper .col-md-6 .text-center .button, .favorites .sidebar .card .card-body form .find-fav, .favorites .sidebar .card .card-body form .tools, .job-sidebar .button-apply, .job-sidebar .tools, .type-page .types-menu form, .type-page .types-menu, main .content-container, header .slider-content .move-down a, header .slider-content, .navbar .collapse.navbar-collapse .sign-in a #register, .navbar .collapse.navbar-collapse .sign-in a #sign-in, .navbar .collapse.navbar-collapse .sign-in, .navbar .collapse.navbar-collapse .search-item, .navbar .collapse.navbar-collapse, .favorites .fav-items-content .row .card .card-footer .content .share-job button, .favorites .fav-items-content .row .card .card-footer .content .add-fav button, .favorites .fav-items-content .row .card .card-footer .content .apply button, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container-fluid .row .card .card-footer .content .share-job button, main .container-fluid .row .card .card-footer .content .add-fav button, main .container-fluid .row .card .card-footer .content .apply button {
   display: flex;
   align-items: center;
 }
 
-.favorites .fav-items-content .row .card .card-footer .content .share-job, .favorites .fav-items-content .row .card .card-footer .content .add-fav, .favorites .fav-items-content .row .card .card-footer .content .apply, .job-sidebar .button-apply .share-job, .job-sidebar .button-apply .add-fav, .job-sidebar .button-apply .apply, main .container .row .card .card-footer .content .share-job, main .container .row .card .card-footer .content .add-fav, main .container .row .card .card-footer .content .apply {
+.favorites .fav-items-content .row .card .card-footer .content .share-job, .favorites .fav-items-content .row .card .card-footer .content .add-fav, .favorites .fav-items-content .row .card .card-footer .content .apply, .job-sidebar .button-apply .share-job, .job-sidebar .button-apply .add-fav, .job-sidebar .button-apply .apply, main .container-fluid .row .card .card-footer .content .share-job, main .container-fluid .row .card .card-footer .content .add-fav, main .container-fluid .row .card .card-footer .content .apply {
   color: #2b95ff;
 }
-.favorites .fav-items-content .row .card .card-footer .content .share-job button, .favorites .fav-items-content .row .card .card-footer .content .add-fav button, .favorites .fav-items-content .row .card .card-footer .content .apply button, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container .row .card .card-footer .content .share-job button, main .container .row .card .card-footer .content .add-fav button, main .container .row .card .card-footer .content .apply button {
+.favorites .fav-items-content .row .card .card-footer .content .share-job button, .favorites .fav-items-content .row .card .card-footer .content .add-fav button, .favorites .fav-items-content .row .card .card-footer .content .apply button, .job-sidebar .button-apply .share-job button, .job-sidebar .button-apply .add-fav button, .job-sidebar .button-apply .apply button, main .container-fluid .row .card .card-footer .content .share-job button, main .container-fluid .row .card .card-footer .content .add-fav button, main .container-fluid .row .card .card-footer .content .apply button {
   border: none;
   border-radius: 50%;
   padding: 5px;
@@ -19,13 +19,13 @@
   font-size: 20px;
   background-color: unset;
 }
-.favorites .fav-items-content .row .card .card-footer .content .share-job button .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button .iconify:nth-child(2), .job-sidebar .button-apply .share-job button .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button .iconify:nth-child(2), .job-sidebar .button-apply .apply button .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button .iconify:nth-child(2) {
+.favorites .fav-items-content .row .card .card-footer .content .share-job button .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button .iconify:nth-child(2), .job-sidebar .button-apply .share-job button .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button .iconify:nth-child(2), .job-sidebar .button-apply .apply button .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .share-job button .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .add-fav button .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .apply button .iconify:nth-child(2) {
   display: none;
 }
-.favorites .fav-items-content .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), .job-sidebar .button-apply .share-job button:hover .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(1), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .apply button:focus .iconify:nth-child(1), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(1), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(1) {
+.favorites .fav-items-content .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), .job-sidebar .button-apply .share-job button:hover .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(1), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .share-job button:hover .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .apply button:hover .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), .favorites .fav-items-content .row .card .card-footer .content .apply button:focus .iconify:nth-child(1), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(1), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(1), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .share-job button:focus .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(1), main .container-fluid .row .card .card-footer .content .apply button:focus .iconify:nth-child(1) {
   display: none;
 }
-.favorites .fav-items-content .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), .job-sidebar .button-apply .share-job button:hover .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(2), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button:focus .iconify:nth-child(2), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(2), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), main .container .row .card .card-footer .content .apply button:focus .iconify:nth-child(2) {
+.favorites .fav-items-content .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), .job-sidebar .button-apply .share-job button:hover .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:hover .iconify:nth-child(2), .job-sidebar .button-apply .apply button:hover .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .share-job button:hover .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .add-fav button:hover .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .apply button:hover .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), .favorites .fav-items-content .row .card .card-footer .content .apply button:focus .iconify:nth-child(2), .job-sidebar .button-apply .share-job button:focus .iconify:nth-child(2), .job-sidebar .button-apply .add-fav button:focus .iconify:nth-child(2), .job-sidebar .button-apply .apply button:focus .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .share-job button:focus .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .add-fav button:focus .iconify:nth-child(2), main .container-fluid .row .card .card-footer .content .apply button:focus .iconify:nth-child(2) {
   display: block;
 }
 
@@ -326,61 +326,67 @@ main .statusMsg {
 main .content-container {
   justify-content: center;
   flex-direction: column;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 main .content-container .count-jobs {
   font-size: 16px;
 }
-main .container {
+main .container-fluid {
   margin: 10px 20px;
 }
-main .container .form-select {
+main .container-fluid .form-select {
   width: fit-content;
   border-radius: 10px;
 }
-main .container .row .card {
+main .container-fluid .row .card {
   border-radius: 10px;
   background-color: white;
   max-width: 18rem;
 }
-main .container .row .card a {
+main .container-fluid .row .card a {
   text-decoration: none;
   color: black;
 }
-main .container .row .card .card-header {
+main .container-fluid .row .card .card-header {
   background-color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main .container .row .card .card-header .img-fluid {
+main .container-fluid .row .card .card-header .img-fluid {
   margin-top: 20px;
 }
-main .container .row .card .card-header .card-title {
+main .container-fluid .row .card .card-header .card-title {
   font-size: 15px;
 }
-main .container .row .card .card-header .card-text.area {
+main .container-fluid .row .card .card-header .card-text.area {
   color: gray;
   margin: 0;
   font-size: 13px;
   font-family: "Source Sans Pro", sans-serif;
 }
-main .container .row .card .card-header .card-text.date {
+main .container-fluid .row .card .card-header .card-text.date {
   font-family: "Source Sans Pro", sans-serif;
   color: darkgray;
   margin: 0;
   font-size: 13px;
 }
-main .container .row .card .card-body {
+main .container-fluid .row .card .card-body {
   height: 120px;
 }
-main .container .row .card .card-body .card-title {
+main .container-fluid .row .card .card-body .card-title {
   font-size: 15px;
 }
-main .container .row .card .card-body .card-text {
+main .container-fluid .row .card .card-body .card-text {
   font-family: "Glacial Indifference", sans-serif;
   font-size: 14px;
   color: #505050;
 }
-main .container .row .card .card-footer .content {
+main .container-fluid .row .card .card-footer {
+  width: 100%;
+}
+main .container-fluid .row .card .card-footer .content {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -957,6 +963,22 @@ footer .row .f-menu a:hover {
   .navbar .mb-menu {
     display: block;
   }
+  .navbar .mb-menu .nav-link {
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar .mb-menu .nav-link .iconify {
+    color: #646464;
+  }
+  .navbar .mb-menu .nav-link.active {
+    background-color: #2b95ff;
+  }
+  .navbar .mb-menu .nav-link.active .iconify {
+    color: white;
+  }
 
   .type-page .types-menu {
     padding-top: 50px;
@@ -969,6 +991,14 @@ footer .row .f-menu a:hover {
 
   main {
     margin-top: 60px;
+  }
+  main .content-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .postForm {
+    padding-top: 10px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -983,6 +1013,52 @@ footer .row .f-menu a:hover {
   }
   .type-page .title-categories {
     display: none;
+  }
+
+  main {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+  }
+  main .content-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  main .content-container .container-fluid .row .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .content-container .container-fluid .row .card .card-header .img-fluid {
+    width: 60px;
+  }
+
+  .postForm {
+    font-size: 12px;
+  }
+  .postForm .job-post {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .postForm .job-post #publishTop {
+    display: none;
+  }
+  .postForm .job-post input {
+    font-size: 12px;
+    height: 30px;
+  }
+  .postForm .job-post select {
+    font-size: 12px;
+  }
+  .postForm .job-post .selectForm {
+    height: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  main .content-container {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media only screen and (max-width: 512px) {
@@ -1025,6 +1101,34 @@ footer .row .f-menu a:hover {
   .type-page .title-categories {
     display: none;
   }
+
+  main {
+    margin-top: 80px;
+  }
+  main .content-container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  main .content-container .row .card .card-header .card-title {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  main .content-container .row .card .card-header .card-text.area {
+    font-size: 9px;
+  }
+  main .content-container .row .card .card-header .card-text.date {
+    font-size: 9px;
+  }
+  main .content-container .row .card .card-header .pop {
+    font-size: 10px;
+  }
+  main .content-container .row .card .card-body .card-title {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  main .content-container .row .card .card-body .card-text {
+    font-size: 10px;
+  }
 }
 @media only screen and (max-width: 380px) {
   .navbar .collapse.navbar-collapse .search-item .search:focus-within .d-flex {
@@ -1064,6 +1168,26 @@ footer .row .f-menu a:hover {
 
   main {
     margin-top: 70px;
+  }
+  main .container-fluid .row .card .card-header .card-title {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  main .container-fluid .row .card .card-header .card-text.area {
+    font-size: 9px;
+  }
+  main .container-fluid .row .card .card-header .card-text.date {
+    font-size: 9px;
+  }
+  main .container-fluid .row .card .card-header .pop {
+    font-size: 10px;
+  }
+  main .container-fluid .row .card .card-body .card-title {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  main .container-fluid .row .card .card-body .card-text {
+    font-size: 10px;
   }
 
   .type-page .types-menu {

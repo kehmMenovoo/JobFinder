@@ -8,7 +8,7 @@ const Copyright = () => {
     return (
         <>
             <footer className="copyright">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="know-us">
                         <Link to="/about" onClick={toTop}>About Us</Link> | 
                         <Link to="/privacy" onClick={toTop}> Privacy Policy</Link> |

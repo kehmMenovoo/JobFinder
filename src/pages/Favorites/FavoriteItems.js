@@ -6,7 +6,7 @@ const FavoriteItems = ({item}) => {
 
     const shrink = (str, length) => {
         if(str.length > length) {
-            str = str.slice(0, length) + "..."
+            str = str.slice(0, length) + "...";
         }
 
         return str;

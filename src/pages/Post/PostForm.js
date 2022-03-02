@@ -1,6 +1,5 @@
-import Copyright from '../Home/Footer/Copyright';
 import { Editor } from '@tinymce/tinymce-react';
-import FooterMenu from '../Home/Footer/FooterMenu';
+
 import React, { useContext, useRef } from 'react'
 import UploadImage from "../../images/upload-logo.jpg";
 import DataContext from '../../contexts/DataContext';
@@ -37,18 +36,18 @@ const PostForm = () => {
         setDescription(e.target.getContent());
     }
     return (
-        <div className="container mt-5">
+        <div className="postForm container mt-5">
             <form className="job-post" autoComplete='off' onSubmit={handlePostJob}>
                 <div className="form-group-heading">
                     <div className='logo-post'>
-                            <div className="form-input">
-                                <div className="preview" onClick={triggerSelect}>
-                                    <img id="img_file-preview" src={selectedImage ? URL.createObjectURL(selectedImage) : UploadImage} alt="thumb" />
-                                    {!selectedImage && <p className="upload-msg">Upload Logo</p>}
-                                    
-                                </div>
-                                <input type="file" id="img_file" accept="image/*" ref={inputRef} onChange={imageChange} />
+                        <div className="form-input">
+                            <div className="preview" onClick={triggerSelect}>
+                                <img id="img_file-preview" src={selectedImage ? URL.createObjectURL(selectedImage) : UploadImage} alt="thumb" />
+                                {!selectedImage && <p className="upload-msg">Upload Logo</p>}
+                                
                             </div>
+                            <input type="file" id="img_file" accept="image/*" ref={inputRef} onChange={imageChange} />
+                        </div>
                         {selectedImage && 
                             <div className='image-tool'>
                                 <Button 
@@ -74,7 +73,7 @@ const PostForm = () => {
                         <div className="form-group">
                             <input 
                                 type="text" 
-                                className="form-control box col-1" 
+                                className="form-control box col-3 col-sm-2" 
                                 required 
                                 placeholder="Company/Organization..." 
                                 id="job_position" 
@@ -94,14 +93,14 @@ const PostForm = () => {
                             />
                         </div>
                     </div>
-                    <div className="publish-btn">
+                    <div className="publish-btn" id="publishTop" >
                         <input className="pub-btn" type="submit" value="Publish" />
                     </div>
                 </div>
 
                 <hr/>
                 <div className="form-group row">
-                    <label for="closing_date" className="col-2 col-form-label">Closing Date<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="closing_date" className="col-4 col-sm-2 col-form-label">Closing Date<sup style={{color: "red"}}>*</sup>:</label>
                     <div className="form-group col-2">
                         <input 
                             type="date" 
@@ -114,7 +113,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_type" className="col-2 col-form-label">Job Type<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="job_type" className="col-4 col-sm-2 col-form-label">Job Type<sup style={{color: "red"}}>*</sup>:</label>
                     <div className="form-group col-2">
                         <select 
                             className="form-select selectForm box box-2" 
@@ -141,7 +140,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="entry_type" className="col-2 col-form-label">Entry Level<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="entry_type" className="col-4 col-sm-2 col-form-label">Entry Level<sup style={{color: "red"}}>*</sup>:</label>
                     <div className="form-group col-2">
                         <select className="form-select selectForm box box-2" id="entry_type" required 
                             value={entryLevel} onChange={e => setEntrylevel(e.target.value)}
@@ -159,7 +158,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="duration_type" className="col-2 col-form-label">Duration Type<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="duration_type" className="col-4 col-sm-2 col-form-label">Duration Type<sup style={{color: "red"}}>*</sup>:</label>
                     <div className="form-group col-2">
                         <select className="form-select selectForm box box-2" id="duration_type" required 
                             value={durationType} onChange={e => setDurationType(e.target.value)}
@@ -177,7 +176,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_location" className="col-2 col-form-label">Job Location<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="job_location" className="col-4 col-sm-2 col-form-label">Job Location<sup style={{color: "red"}}>*</sup>:</label>
                     <div className="form-group col-4">
                         <input 
                             type="text" 
@@ -191,7 +190,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_department" className="col-2 col-form-label">Department:</label>
+                    <label for="job_department" className="col-4 col-sm-2 col-form-label">Department:</label>
                     <div className="form-group col-4">
                         <input 
                             type="text" 
@@ -204,7 +203,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_subdepartment" className="col-2 col-form-label">Sub-Department:</label>
+                    <label for="job_subdepartment" className="col-4 col-sm-2 col-form-label">Sub-Department:</label>
                     <div className="form-group col-4">
                         <input 
                             type="text" 
@@ -217,7 +216,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_reportto" className="col-2 col-form-label">Report to:</label>
+                    <label for="job_reportto" className="col-4 col-sm-2 col-form-label">Report to:</label>
                     <div className="form-group col-4">
                         <input 
                             type="text" 
@@ -240,10 +239,7 @@ const PostForm = () => {
                             'searchreplace visualblocks code',
                             'insertdatetime media table paste wordcount'
                         ],
-                        toolbar: 'undo redo formatselect bold italic underline \
-                            forecolor backcolor | align bullist numlist outdent indent \
-                            | link strikethrough blockquote | removeformat help fullscreen | \
-                            removeformat image video help autoresize',
+                        toolbar: 'undo redo formatselect bold italic underline forecolor backcolor | align bullist numlist outdent indent | link strikethrough blockquote | removeformat help fullscreen | removeformat image video help autoresize',
                         toolbar_location: 'bottom',
                         statusbar: false,
                         placeholder: "Type your message...",
@@ -256,8 +252,6 @@ const PostForm = () => {
                     <input className="pub-btn" type="submit" value="Publish" />
                 </div>
             </form>
-            <FooterMenu />
-            <Copyright />
         </div>
     )
 

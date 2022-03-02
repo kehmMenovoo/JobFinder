@@ -268,13 +268,16 @@ main {
         @extend %flex-box;
         justify-content: center;
         flex-direction: column;
+        padding-left: 100px;
+        padding-right: 100px;
 
         .count-jobs {
             font-size: 16px;
         }
     }
-    .container {
+    .container-fluid {
         margin: 10px 20px;
+
         .form-select {
             width: fit-content;
             border-radius: 10px;
@@ -284,12 +287,13 @@ main {
             .card {
                 border-radius: 10px;
                 background-color: white;
+                max-width: 18rem;
 
                 a {
                     text-decoration: none;
                     color: black;
                 }
-                max-width: 18rem;
+                
                 .card-header {
                     background-color: white;
                     border-top-left-radius: 10px;
@@ -326,7 +330,9 @@ main {
                     }
                 }
                 .card-footer {
+                    width: 100%;
                     .content {
+                        width: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: center;

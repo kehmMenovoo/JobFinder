@@ -20,15 +20,15 @@ const Job = ({item}) => {
                 <Link to={`/jobinfo/${item.id}`} onClick={toTop}>
                     <div className="card-header">
                         <div className="row g-0">
-                            <div className="col-md-4">
+                            <div className="col-4">
                                 <img src={item.avatar} alt="item" width="212px" height="111px" className="img-fluid rounded-start" />
                             </div>
-                            <div className="col-md-8">
+                            <div className="col-8">
                                 <div className="card-body">
                                     <h5 className="card-title">{shrink(item.company, 19)}</h5>
                                     <p className="card-text area"><span className="iconify" data-icon="entypo:location"></span> {shrink(item.location, 11)}</p>
                                     <p className="card-text date"><small className="text-muted">Due: {item.due}</small></p>
-                                    {item.boost ? (<small style={{color: "#33cc33"}}>(Popular)</small>) : null} 
+                                    {item.boost ? (<small className="pop" style={{color: "#33cc33"}}>(Popular)</small>) : null} 
                                 </div>
                                 
                             </div>
