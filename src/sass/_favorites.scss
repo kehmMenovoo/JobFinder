@@ -8,13 +8,19 @@
             position: fixed;
             width: 280px;
             min-height: 88vh;
+            z-index: 999;
     
             .card-header {
                 background-color: white;
                 padding: 10px 5px 5px 20px;
+                @extend %flex-box;
+                justify-content: space-between;
     
                 h3 {
                     font-weight: bold;
+                }
+                .iconify {
+                    display: none;
                 }
             }
     
@@ -87,8 +93,11 @@
     }
 
     .fav-items-content {
-        margin-left: 300px;
+        margin-top: 40px;
+        margin-left: 340px;
         margin-right: 20px;
+        min-height: 80vh;
+        margin-bottom: -60px;
         
         .row {
             .card {
@@ -104,6 +113,8 @@
                     background-color: white;
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    padding: 8px;
+
                     .img-fluid {
                         margin-top: 20px;
                     }

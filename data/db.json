@@ -343,6 +343,40 @@
       "subDepartment": "Marketing - Social Networking",
       "Report": "Assistant Business Development Manager",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
+    },
+    {
+      "boost": true,
+      "id": 1,
+      "avatar": "../../../images/JOBFINDER.png",
+      "company": "XWATER TECHNOLOGY CO., LTD.",
+      "location": "Phnom Penh, Cambodia",
+      "postDate": "1 Jan, 2022",
+      "due": "13 Mar, 2022",
+      "position": "HR & Admin Officer / Networking Manger / Sales Manager, Sales...",
+      "typeJob": "IT",
+      "durationType": "full-time",
+      "entryLevel": "experience",
+      "department": "Marketing",
+      "subDepartment": "Marketing - Social Networking",
+      "Report": "Assistant Business Development Manager",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
+    },
+    {
+      "boost": false,
+      "id": 2,
+      "avatar": "../../../images/JOBFINDER.png",
+      "company": "WWWW WWWWWW WWWW WWWWW",
+      "location": "Phnom Penh, Cambodia",
+      "postDate": "1 Jan, 2022",
+      "due": "13 Mar, 2022",
+      "position": "Legendary of Gambler / Networking Manger / Sales Manager, Sales...",
+      "typeJob": "IT",
+      "durationType": "full-time",
+      "entryLevel": "experience",
+      "department": "Marketing",
+      "subDepartment": "Marketing - Social Networking",
+      "Report": "Assistant Business Development Manager",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laborum excepturi iste, perferendis, repudiandae quaerat voluptates placeat, suscipit magni aliquid porro alias rem hic. Quos nemo officia quod ipsam velit!"
     }
   ]
 }

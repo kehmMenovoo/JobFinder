@@ -15,7 +15,7 @@ const Job = ({item}) => {
     }
 
     return (
-        <motion.article layout className="col-sm-6 col-md-4 col-12 col-lg-3 mb-3">
+        <motion.article layout className="col-sm-6 col-md-4 col-12 col-lg-3 col-xxl-2 mb-3">
             <div className="card text-dark mb-3">
                 <Link to={`/jobinfo/${item.id}`} onClick={toTop}>
                     <div className="card-header">

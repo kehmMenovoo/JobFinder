@@ -48,11 +48,14 @@ const SignIn = () => {
                                     <span class="iconify" data-icon="bx:lock"></span>
                                     <input type="password" required placeholder="Password..." minLength={8} />
                                 </div>
-                                <label style={{color: "gray", fontSize: "12px"}}>Forgot password?</label>
+                                <label className="forgot">Forgot password?</label>
                                 <br /><br />
                                 <div className="log">
-                                    <button>Create Account</button>
-                                    <button>Log in</button>
+                                    <div></div>
+                                    <div className="log-btn">
+                                        <button>Create Account</button>
+                                        <button>Log in</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>

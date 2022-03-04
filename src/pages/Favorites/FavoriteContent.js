@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ContentItems from './ContentItems';
-import FavoriteItems from './FavoriteItems';
+import Copyright from "../Home/Footer/Copyright";
+import FooterMenu from "../Home/Footer/FooterMenu";
 
 const FavoriteContent = () => {
+
+    const [toggleClass, setToggleClass] = useState(false);
+
+    const showMenu = () => {
+        setToggleClass(!toggleClass);
+    }
 
     return (
         <div className='favorites'>
             <div className="sidebar">
                 <div className="card text-dark mb-3">
                     <div className="card-header">
-                        <h3>Favorites</h3>
+                        <><h3>Favorites</h3></>
+                        <div onClick={showMenu}>
+                            <span class="iconify" data-icon="entypo:menu"></span>
+                        </div>
                     </div>
-                    <div className="card-body">
+                    <div className={toggleClass ? "card-body active":"card-body"}>
                         <form>
                             <div className="tools">
                                 <select name="filter" className="filter">
@@ -37,6 +47,8 @@ const FavoriteContent = () => {
 
             <div className="fav-items-content">
                 <ContentItems />
+                <FooterMenu />
+                <Copyright />
             </div>
         </div>
     )

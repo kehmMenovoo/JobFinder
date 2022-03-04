@@ -11,8 +11,8 @@ const TermOfUse = () => {
         history.goBack();
     }
     return (
-        <div className="term-of-use">
-            <div className="term-sheet">
+        <div className="term-of-use" id="term-of-use">
+            <div className="term-sheet" id="term-sheet">
                 <div className="title-term">
                     <div className="tools">
                         <div className="back-btn" onClick={goBack}>

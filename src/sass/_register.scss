@@ -1,0 +1,176 @@
+.register-form {
+    @extend %flex-box;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .card {
+        max-width: fit-content;
+        background-color: white;
+        border-radius: 10px;
+
+        .card-header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: white;
+            @extend %flex-box;
+            justify-content: space-between;
+
+            .logoSign {
+                img {
+                    width: 30px;
+                }
+            }
+            .signTitle {
+                color: $main-color;
+            }
+            .signBlank {
+                width: 30px;
+    
+                .iconify {
+                    font-size: 25px;
+                    color: gray;
+    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+      
+
+        .card-body {
+            padding: 50px 70px 50px 70px;
+
+            form {
+                
+                .signEmail {
+                    border: 1px solid $hover-menu;
+                    @extend %flex-box;
+                    padding: 5px 8px;
+                    background-color: $hover-menu;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+                    width: fit-content;
+
+                    &:focus-within {
+                        background-color: white;
+                        border: 1px solid $main-color;
+                        input {
+                            background-color: white;
+                        }
+                    }
+                    input {
+                        width: 400px;
+                        padding-left: 10px;
+                        background-color: $hover-menu;
+                        border: none;
+                        outline: none;
+                    }                  
+
+                    .iconify {
+                        font-size: 18px;
+                        color: gray;
+                    }
+                    
+                }
+                .user-name {
+                    @extend %flex-box;
+                    gap: 15px;
+                    
+                    
+                    .first {
+                        width: calc(44% - 10px);
+                        padding: 5px 8px;
+                        background-color: $hover-menu;
+                        border-radius: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid $hover-menu;
+                        input {
+                            width: calc(100% - 20px);
+                            padding-left: 10px;
+                        }
+                        
+
+                        &:focus-within {
+                            background-color: white;
+                            border: 1px solid $main-color;
+                            input {
+                                background-color: white;
+                            }
+                        }
+                    }
+                    .last {
+                        width: fit-content;
+                        padding: 5px 8px;
+                        background-color: $hover-menu;
+                        border-radius: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid $hover-menu;
+
+                        input {
+                            padding-left: 10px;
+                        }
+
+                        &:focus-within {
+                            background-color: white;
+                            border: 1px solid $main-color;
+                            input {
+                                background-color: white;
+                            }
+                        }
+                    }
+
+                    .iconify {
+                        font-size: 18px;
+                        color: gray;
+                    }
+
+                    input {
+                        width: fit-content;
+                        padding-left: 5px;
+                        background-color: $hover-menu;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                .gender {
+                    margin-bottom: 15px;
+                    input {
+                        margin-right: 5px;
+                    }
+                    label {
+                        margin-right: 10px;
+                    }
+                }
+                .country-select {
+                    margin-bottom: 15px;
+                    .sel-country {
+                        background-color: $hover-menu;
+                    }
+                }
+                .term {
+                    margin-bottom: 20px;
+                    input {
+                        margin-right: 5px;
+                    }
+                    label {
+                        font-size: 15px;
+                        color: gray;
+                    }
+                }
+                .submit {
+                    .btn-register {
+                        width: 100%;
+                        border: none;
+                        background-color: $main-color;
+                        color: white;
+                        padding: 8px;
+                        border-radius: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ const FavoriteItems = ({item}) => {
         window.scrollTo(0, 0);
     }
     return (
-        <motion.article layout className="col-3 mb-3">
+        <motion.article layout className="col-xxl-3 col-md-4 col-sm-6 col-12 mb-3">
             <div className="card text-dark mb-3">
                 <Link to={`/jobinfo/${item.id}`} onClick={toTop}>
                     <div className="card-header">
@@ -28,7 +28,7 @@ const FavoriteItems = ({item}) => {
                                     <h5 className="card-title">{shrink(item.company, 19)}</h5>
                                     <p className="card-text area"><span className="iconify" data-icon="entypo:location"></span> {shrink(item.location, 11)}</p>
                                     <p className="card-text date"><small className="text-muted">Due: {item.due}</small></p>
-                                    {item.boost ? (<small style={{color: "#33cc33"}}>(Popular)</small>) : null} 
+                                    {item.boost ? (<small className='pop' style={{color: "#33cc33"}}>(Popular)</small>) : null} 
                                 </div>
                                 
                             </div>

@@ -1,5 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
+.home {
+    .browse-bottom {
+        @extend %flex-box;
+        gap: 8px;
+        width: fit-content;
+        margin: 50px auto 80px auto;
+
+
+        .move-down {
+            &:nth-child(2) a {
+                border: 2px solid $register;
+                background-color: $register;
+
+            }
+            a {
+                @extend %flex-box;
+                align-items: center;
+                font-size: 14px;
+                border: 2px solid $main-color;
+                border-radius: 10px;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: white;
+                background-color: $main-color;
+
+                .iconify {
+                    color: white;
+                    width: 20px;
+                }
+                &:hover {
+                    transform: scale(1.02);
+                }
+
+            }
+        }
+    }
+}
 /* navigation bar  */
 .navbar {
     background-color: white;
@@ -181,7 +218,6 @@
     }
 }
 
-
 header {
     width: 100%;
     .slider {
@@ -205,39 +241,60 @@ header {
         }
 
         &-content {
-            position: absolute;
-            @extend %flex-box;
-            flex-direction: column;
-            justify-content: space-around;
-            top: 100px;
-            width: 100%;
-            height: 300px;
-            text-align: center;
-            color: white;
-            z-index: 99;
-
-            .move-down a {
+                position: absolute;
                 @extend %flex-box;
-                align-items: center;
-                font-size: 18px;
-                border: 2px solid $main-color;
-                border-radius: 30px;
-                padding: 5px 15px;
-                text-decoration: none;
+                flex-direction: column;
+                justify-content: space-around;
+                top: 100px;
+                width: 100%;
+                height: 300px;
+                text-align: center;
                 color: white;
+                z-index: 99;
 
-                .iconify {
-                    color: $main-color;
-                    font-size: 25px;
-                }
-                &:hover {
-                    background-color: $main-color;
-                    border: 2px solid white;
-                }
-                &:hover .iconify {
-                    color: white;
-                }
+            .browse {
+                @extend %flex-box;
+                gap: 8px;
 
+                .move-down {
+                    &:nth-child(2) a {
+                        border: 2px solid $register;
+
+                        .iconify {
+                            color: $register;
+                        }
+                        &:hover {
+                            background-color: $register;
+                            border: 2px solid white;
+                        }
+                        &:hover .iconify {
+                            color: white;
+                        }
+                    }
+                    a {
+                        @extend %flex-box;
+                        align-items: center;
+                        font-size: 18px;
+                        border: 2px solid $main-color;
+                        border-radius: 30px;
+                        padding: 5px 15px;
+                        text-decoration: none;
+                        color: white;
+    
+                        .iconify {
+                            color: $main-color;
+                            font-size: 25px;
+                        }
+                        &:hover {
+                            background-color: $main-color;
+                            border: 2px solid white;
+                        }
+                        &:hover .iconify {
+                            color: white;
+                        }
+    
+                    }
+                }
             }
         }
     }
@@ -298,6 +355,8 @@ main {
                     background-color: white;
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
+                    padding: 5px 5px 5px 8px;
+
                     .img-fluid {
                         margin-top: 20px;
                     }

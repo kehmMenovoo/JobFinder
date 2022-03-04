@@ -1,4 +1,3 @@
-import ContentItems from "./ContentItems";
 import DataContext from "../../contexts/DataContext";
 import PageLoading from "../../layout/PageLoading";
 import React, { useContext } from "react";
