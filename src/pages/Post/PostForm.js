@@ -30,6 +30,7 @@ const PostForm = () => {
     // This function will be triggered when the "Remove This Image" button is clicked
     const removeSelectedImage = () => {
       setSelectedImage();
+      setAvatar(UploadImage);
     };
 
     const handleEditorChange = (e) => {
@@ -100,7 +101,7 @@ const PostForm = () => {
 
                 <hr/>
                 <div className="form-group row">
-                    <label for="closing_date" className="col-4 col-sm-2 col-form-label">Closing Date<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="closing_date" className="col-4 col-sm-2 col-form-label">Closing Date <span style={{color: "red"}}>*</span>:</label>
                     <div className="form-group col-2">
                         <input 
                             type="date" 
@@ -113,7 +114,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_type" className="col-4 col-sm-2 col-form-label">Job Type<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="job_type" className="col-4 col-sm-2 col-form-label">Job Type <span style={{color: "red"}}>*</span>:</label>
                     <div className="form-group col-2">
                         <select 
                             className="form-select selectForm box box-2" 
@@ -140,7 +141,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="entry_type" className="col-4 col-sm-2 col-form-label">Entry Level<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="entry_type" className="col-4 col-sm-2 col-form-label">Entry Level <span style={{color: "red"}}>*</span>:</label>
                     <div className="form-group col-2">
                         <select className="form-select selectForm box box-2" id="entry_type" required 
                             value={entryLevel} onChange={e => setEntrylevel(e.target.value)}
@@ -158,7 +159,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="duration_type" className="col-4 col-sm-2 col-form-label">Duration Type<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="duration_type" className="col-4 col-sm-2 col-form-label">Duration Type <span style={{color: "red"}}>*</span>:</label>
                     <div className="form-group col-2">
                         <select className="form-select selectForm box box-2" id="duration_type" required 
                             value={durationType} onChange={e => setDurationType(e.target.value)}
@@ -176,7 +177,7 @@ const PostForm = () => {
                     </div>
                 </div>
                 <div className="form-group row">
-                    <label for="job_location" className="col-4 col-sm-2 col-form-label">Job Location<sup style={{color: "red"}}>*</sup>:</label>
+                    <label for="job_location" className="col-4 col-sm-2 col-form-label">Job Location <span style={{color: "red"}}>*</span>:</label>
                     <div className="form-group col-4">
                         <input 
                             type="text" 
@@ -230,6 +231,7 @@ const PostForm = () => {
                 </div>
                 <p className="col-form-label">Job Description:</p>
                 <Editor
+                    className="describe-job"
                     apiKey="7cem6u4zosjen9lg7ftfsxe5j3r8pa4xiium6ury9uvjbvmw"
                     init={{
                         menubar: false,

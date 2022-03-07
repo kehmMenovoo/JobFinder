@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
 .job-post {
     margin-top: 60px;
@@ -79,8 +79,8 @@
     
     
     .form-input {
-        padding: 0;
-        width: 150px;
+        padding: 0 15px;
+        width: fit-content;
         height: fit-content;
         border: 2px dashed #cccccc;
         margin-bottom: 20px;
@@ -93,6 +93,11 @@
             @extend %flex-box;
             flex-direction: column;
             justify-content: center;
+
+            width: 100px;
+            // display: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
     
@@ -118,12 +123,6 @@
 
     }
     
-    .form-input img {
-        width: 90%;
-        // display: none;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
     .publish-btn {
         display: flex;
         justify-content: flex-end;
@@ -146,4 +145,6 @@
         justify-content: space-between;
         margin-top: -10px;
     }
+
+   
 }

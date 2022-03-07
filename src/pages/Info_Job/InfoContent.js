@@ -6,7 +6,7 @@ const InfoContent = ({data}) => {
     
     const {history} = useContext(DataContext);
 
-    // document.querySelector('#info').innerHTML = "Hello world";
+    // document.querySelector('#info').innerText = data.description ? data.description:"No description!";
 
     function titleCase(str) {
         var splitStr = str.split(' ');

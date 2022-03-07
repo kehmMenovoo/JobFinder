@@ -33,6 +33,11 @@
     
                     &:hover {
                         cursor: pointer;
+                        color: $main-color;
+                        
+                    }
+                    &:active {
+                        transform: translateX(-2px);
                     }
                 }
             }
@@ -56,6 +61,9 @@
                     &:focus-within {
                         background-color: white;
                         border: 1px solid $main-color;
+                        .iconify {
+                            color: $main-color;
+                        }
                         input {
                             background-color: white;
                         }
@@ -95,6 +103,10 @@
                         &:focus-within {
                             background-color: white;
                             border: 1px solid $main-color;
+                            
+                            .iconify {
+                                color: $main-color;
+                            }
                             input {
                                 background-color: white;
                             }
@@ -115,6 +127,10 @@
                         &:focus-within {
                             background-color: white;
                             border: 1px solid $main-color;
+
+                            .iconify {
+                                color: $main-color;
+                            }
                             input {
                                 background-color: white;
                             }
@@ -157,6 +173,14 @@
                     label {
                         font-size: 15px;
                         color: gray;
+
+                        a {
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
                 .submit {

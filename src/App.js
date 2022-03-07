@@ -1,5 +1,5 @@
 import About from "./pages/About/About";
-import BrowseFreelancer from "./pages/Post/BrowseFreelancer";
+import Boost from "./layout/Boost";
 import Contact from "./pages/Contact/Contact";
 import DataContext from "./contexts/DataContext";
 import Favorite from "./pages/Favorites/Favorite";
@@ -23,7 +23,7 @@ function App() {
   const {splitLocation, search, } = useContext(DataContext);
   
   const title=["Search", "Home", "Job Types", "Favorites", "Post", "Contact Us", "Job Information", "Register", 
-    "Sign in", "Browse Freelancer", "Post Project", "About", "Privacy", "Term of Use", "Page Not Found"];
+    "Sign in", "Boost", "Post Project", "About", "Privacy", "Term of Use", "Page Not Found"];
   const main = " | Khom Rok";
   const titleName = document.querySelector("title");
 
@@ -37,7 +37,7 @@ function App() {
     case "jobinfo": titleName.innerHTML = title[6] + main; break;
     case "register": titleName.innerHTML = title[7] + main; break;
     case "sign_in": titleName.innerHTML = title[8] + main; break;
-    case "browsefreelancer": titleName.innerHTML = title[9] + main; break;
+    case "boost": titleName.innerHTML = title[9] + main; break;
     case "postproject": titleName.innerHTML = title[10] + main; break;
     case "about": titleName.innerHTML = title[11] + main; break;
     case "privacy": titleName.innerHTML = title[12] + main; break;
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-        {splitLocation[1] === "register" || splitLocation[1] === "sign_in" ? null : 
+        {splitLocation[1] === "register" || splitLocation[1] === "sign_in" || splitLocation[1] === "boost" ? null : 
           <Header />
         }
           <Switch>
@@ -60,7 +60,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/sign_in" component={SignIn} />
             <Route path="/jobinfo/:id" component={JobInfo} />
-            <Route path="/browsefreelancer" component={BrowseFreelancer} />
+            <Route path="/boost" component={Boost} />
             <Route path="/postproject" component={PostProject} />
             <Route path="/about" component={About} />
             <Route path="/privacy" component={Privacy} />

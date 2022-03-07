@@ -18,6 +18,9 @@ const SignIn = () => {
     const goBack = () => {
         history.goBack()
     }
+    const toCreateAcc = () => {
+        history.push("/register");
+    }
     return (
         <div className="signIn">
             <PageLoading />
@@ -53,8 +56,8 @@ const SignIn = () => {
                                 <div className="log">
                                     <div></div>
                                     <div className="log-btn">
-                                        <button>Create Account</button>
-                                        <button>Log in</button>
+                                        <button type="button" onClick={toCreateAcc}>Create Account</button>
+                                        <button type="submit">Log in</button>
                                     </div>
                                 </div>
                             </form>

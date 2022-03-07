@@ -20,6 +20,9 @@ const FooterMenu = () => {
                         <div className="f-menu col-md-3 col-sm-4 ">
                             <h5>job seekers</h5>
                             <p>
+                                <a href="/">Top Careers</a>
+                            </p>
+                            <p>
                                 <a href="/jobtype">Discover Job Types</a>
                             </p>
                         </div>
@@ -30,10 +33,7 @@ const FooterMenu = () => {
                                 <a href="/post">Post a Job</a>
                             </p>
                             <p>
-                                <a href="/browsefreelancer">Browe Freelancer</a>
-                            </p>
-                            <p>
-                                <a href="/postproject">Post a Project</a>
+                                <a href="/boost">Package Boost</a>
                             </p>
                         </div>
 

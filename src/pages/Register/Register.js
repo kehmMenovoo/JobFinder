@@ -26,7 +26,8 @@ const Register = () => {
                         <img src={JobFinder} alt="JF" />
                     </div>
                 </div>
-                    <div class="card-body">
+                
+                <div class="card-body">                  
                     <form autoComplete="on">
                         <div className="signEmail">
                             <span className="iconify" data-icon="akar-icons:envelope"></span>
@@ -64,15 +65,18 @@ const Register = () => {
                         
                         <div className="term">
                             <input type="checkbox" />
-                            <label>I agreed with <Link to="/termofuse">terms</Link> and <Link to="/privacy">conditions</Link></label>
+                            <label>I agreed with <Link to="/termofuse">terms</Link> and <Link to="/privacy">conditions</Link></label><br />
+                            <label>
+                                <Link to="sign_in">Already have an account?</Link>
+                            </label>
                         </div>
 
                         <div className="submit">
                             <button className="btn-register" type="submit">Register</button>
                         </div>
                     </form>
-                    </div>
                 </div>
+            </div>
         </div>
     )
 }
