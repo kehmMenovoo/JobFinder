@@ -36,7 +36,7 @@ export const DataProvider = ({children}) => {
     const [report, setReport] = useState("");
     const [description, setDescription] = useState("");
 
-    const API_URL_All = 'http://localhost:3500/data';
+    const API_URL_All = 'https://api-for-jobfinder-project.herokuapp.com/data';
     let limit = 40;
     // let pageAddress = `/page${currentPage}`;
 
@@ -65,7 +65,7 @@ export const DataProvider = ({children}) => {
                 setpageCount(Math.ceil(total/limit));
 
                 // Favorite Data
-                const res = await fetch('http://localhost:3500/favorites')
+                const res = await fetch('https://api-for-jobfinder-project.herokuapp.com/favorites')
                 const temp = await res.json();
                 if(!res.ok) throw Error("Can't Find Data!");
                 setFavoriteData(temp);
